@@ -17,8 +17,8 @@ const srcBase = "./src";
 const distBase = "./dist";
 
 const srcPath = {
-	scss: srcBase + "/sass/**/*.scss",
-	js: srcBase + "/js/*.js",
+	scss: srcBase + "/asset/sass/**/*.scss",
+	js: srcBase + "/asset/js/*.js",
 	html: srcBase + "/*.html",
 };
 
