@@ -1,9 +1,10 @@
 //gulp本体
 const gulp = require("gulp");
 
-//scss
-//Dart Sass はSass公式が推奨 @use構文などが使える
+//scss Dart Sass はSass公式が推奨 @use構文などが使える
 const sass = require("gulp-dart-sass");
+const rename = require("gulp-rename");
+const uglify = require("gulp-uglify");
 // エラーが発生しても強制終了させない
 const plumber = require("gulp-plumber");
 // エラー発生時のアラート出力
@@ -17,11 +18,13 @@ const distBase = "./dist";
 
 const srcPath = {
 	scss: srcBase + "/sass/**/*.scss",
+	js: srcBase + "/js/*.js",
 	html: srcBase + "/*.html",
 };
 
 const distPath = {
 	css: distBase + "/asset/css/",
+	js: distBase + "/asset/js/",
 	html: distBase + "/",
 };
 
@@ -48,6 +51,30 @@ const cssSass = () => {
 				onLast: true,
 			})
 		);
+};
+
+/**
+ * js
+ */
+const js = () => {
+	return (
+		gulp
+			.src(srcPath.js)
+			.pipe(
+				//エラーが出ても処理を止めない
+				plumber({
+					errorHandler: notify.onError("Error:<%= error.message %>"),
+				})
+			)
+			.pipe(uglify())
+			// .pipe(
+			// 	rename({
+			// 		extname: ".min.js",
+			// 	})
+			// )
+			.pipe(gulp.dest(distPath.js))
+			.pipe(browserSync.stream())
+	);
 };
 
 /**
@@ -83,6 +110,7 @@ const browserSyncReload = (done) => {
  */
 const watchFiles = () => {
 	gulp.watch(srcPath.scss, gulp.series(cssSass));
+	gulp.watch(srcPath.js, gulp.series(js));
 	gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
 };
 
@@ -91,6 +119,6 @@ const watchFiles = () => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-	gulp.parallel(html, cssSass),
+	gulp.parallel(html, js, cssSass),
 	gulp.parallel(watchFiles, browserSyncFunc)
 );
