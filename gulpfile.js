@@ -8,6 +8,10 @@ const purgecss = require("gulp-purgecss");
 const cleancss = require("gulp-clean-css");
 // js 縮小化
 const uglify = require("gulp-uglify");
+// img 縮小化
+const imagemin = require("gulp-imagemin");
+const imageminPngquant = require("imagemin-pngquant");
+const imageminMozjpeg = require("imagemin-mozjpeg");
 // エラーが発生しても強制終了させない
 const plumber = require("gulp-plumber");
 // エラー発生時のアラート出力
@@ -22,12 +26,14 @@ const distBase = "./dist";
 const srcPath = {
 	scss: srcBase + "/asset/sass/**/*.scss",
 	js: srcBase + "/asset/js/*.js",
+	img: srcBase + "/asset/img/**",
 	html: srcBase + "/*.html",
 };
 
 const distPath = {
 	css: distBase + "/asset/css/",
 	js: distBase + "/asset/js/",
+	img: distBase + "/asset/img/",
 	html: distBase + "/",
 };
 
@@ -80,6 +86,29 @@ const js = () => {
 };
 
 /**
+ * img
+ */
+const img = () => {
+	return gulp
+		.src(srcPath.img)
+		.pipe(
+			//エラーが出ても処理を止めない
+			plumber({
+				errorHandler: notify.onError("Error:<%= error.message %>"),
+			})
+		)
+		.pipe(
+			imagemin([
+				imagemin.svgo(),
+				imagemin.optipng(),
+				imagemin.gifsicle({ optimizationLevel: 3 }),
+			])
+		)
+		.pipe(gulp.dest(distPath.img))
+		.pipe(browserSync.stream());
+};
+
+/**
  * html
  */
 const html = () => {
@@ -113,6 +142,7 @@ const browserSyncReload = (done) => {
 const watchFiles = () => {
 	gulp.watch(srcPath.scss, gulp.series(cssSass));
 	gulp.watch(srcPath.js, gulp.series(js));
+	gulp.watch(srcPath.img, gulp.series(img));
 	gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
 };
 
@@ -121,6 +151,6 @@ const watchFiles = () => {
  * parallelは並列で実行
  */
 exports.default = gulp.series(
-	gulp.parallel(html, js, cssSass),
+	gulp.parallel(html, img, js, cssSass),
 	gulp.parallel(watchFiles, browserSyncFunc)
 );
