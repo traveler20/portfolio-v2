@@ -1,0 +1,50 @@
+// system
+// ---------------------------
+
+// color system
+// ---------------------
+// $c-main: #333;
+$c-base: #333;
+$c-body: #fff;
+// $c-accent: #ffc93c;
+// $c-accent-50: rgba(
+// 	$c: $c-accent,
+// 	$alpha: 0.5,
+// );
+
+$box-shadow: 3px 3px 3px
+	rgba(
+		$color: $c-base,
+		$alpha: 0.25,
+	);
+
+// responsive system
+// ---------------------
+@mixin oswald($weight: "400") {
+	font-family: "Oswald", sans-serif;
+	font-weight: $weight;
+}
+
+@mixin breakpoint($point) {
+	@if $point == tablet {
+		@media (min-width: 640px) {
+			@content;
+		}
+	}
+	@if $point == pc {
+		@media (min-width: 750px) {
+			@content;
+		}
+	}
+}
+
+.pc-only {
+	display: none;
+}
+@include breakpoint(tablet) {
+}
+@include breakpoint(pc) {
+	.pc-only {
+		display: inline-block;
+	}
+}

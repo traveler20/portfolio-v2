@@ -1,5 +1,7 @@
 /* base
 --------------------------- */
+@use "./system" as s;
+
 *,
 *:before,
 *:after {
@@ -16,8 +18,8 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	color: #fff;
-	background-color: #333;
+	color: s.$c-body;
+	background-color: s.$c-base;
 	font-size: 1.6rem;
 	font-family: YuGothic, "Yu Gothic", "Helvetica Neue", Arial,
 		"Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
@@ -27,8 +29,8 @@ body {
 	overflow-x: hidden;
 }
 ::selection {
-	background-color: #fff;
-	color: #333;
+	background-color: s.$c-body;
+	color: s.$c-base;
 }
 
 img,
@@ -55,28 +57,4 @@ a:hover img {
 	-ms-transition: all 0.3s;
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
-}
-
-@mixin breakpoint($point) {
-	@if $point == tablet {
-		@media (min-width: 640px) {
-			@content;
-		}
-	}
-	@if $point == pc {
-		@media (min-width: 750px) {
-			@content;
-		}
-	}
-}
-
-.pc-only {
-	display: none;
-}
-@include breakpoint(tablet) {
-}
-@include breakpoint(pc) {
-	.pc-only {
-		display: inline-block;
-	}
 }

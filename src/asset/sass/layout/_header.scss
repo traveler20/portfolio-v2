@@ -1,2 +1,15 @@
 /* l-header
 --------------------------- */
+@use "./../foundation/system" as s;
+
+header {
+	color: s.$c-base;
+}
+
+@include s.breakpoint(tablet) {
+}
+@include s.breakpoint(pc) {
+	.pc-only {
+		display: inline-block;
+	}
+}
