@@ -1,7 +1,0 @@
-@use "foundation/reset";
-@use "foundation";
-@forward "foundation/reset";
-body {
-	background-color: #333;
-	color: #fff;
-}

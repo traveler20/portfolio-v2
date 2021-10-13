@@ -1,76 +1,96 @@
+//gulp本体
 const gulp = require("gulp");
 
-/* sass */
-const sass = require("gulp-sass");
+//scss
+//Dart Sass はSass公式が推奨 @use構文などが使える
+const sass = require("gulp-dart-sass");
+// エラーが発生しても強制終了させない
 const plumber = require("gulp-plumber");
+// エラー発生時のアラート出力
 const notify = require("gulp-notify");
-const sassGlob = require("gulp-sass-glob");
-const mmq = require("gulp-merge-media-queries");
-const postcss = require("gulp-postcss");
-const autoprefixer = require("autoprefixer");
-const cssdeclsort = require("css-declaration-sorter");
-
-/* browser-sync */
+//ブラウザリロード
 const browserSync = require("browser-sync");
 
-/* imagemin */
-// const imagemin = require("gulp-imagemin");
-// const imageminPngquant = require("imagemin-pngquant");
-// const imageminMozjpeg = require("imagemin-mozjpeg");
-// const imageminOption = [
-// 	imageminPngquant({ quality: [0.65, 0.8] }),
-// 	imageminMozjpeg({ quality: 85 }),
-// 	imagemin.gifsicle({
-// 		interlaced: false,
-// 		optimizationLevel: 1,
-// 		colors: 256,
-// 	}),
-// 	imagemin.mozjpeg(),
-// 	imagemin.optipng(),
-// 	imagemin.svgo(),
-// ];
+// 入出力するフォルダを指定
+const srcBase = "./src";
+const distBase = "./dist";
 
-gulp.task("sass", function () {
+const srcPath = {
+	scss: srcBase + "/sass/**/*.scss",
+	html: srcBase + "/*.html",
+};
+
+const distPath = {
+	css: distBase + "/asset/css/",
+	html: distBase + "/",
+};
+
+/**
+ * sass
+ */
+const cssSass = () => {
 	return gulp
-		.src("./src/sass/**/*.scss")
+		.src(srcPath.scss, {
+			sourcemaps: true,
+		})
 		.pipe(
-			plumber({ errorHandler: notify.onError("Error: <%= error.message %>") })
+			//エラーが出ても処理を止めない
+			plumber({
+				errorHandler: notify.onError("Error:<%= error.message %>"),
+			})
 		)
-		.pipe(sassGlob())
-		.pipe(sass({ outputStyle: "expanded" }))
-		.pipe(postcss([autoprefixer()]))
-		.pipe(postcss([cssdeclsort({ order: "alphabetical" })]))
-		.pipe(mmq())
-		.pipe(gulp.dest("./dist/css"));
-});
+		.pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
+		.pipe(gulp.dest(distPath.css, { sourcemaps: "./" })) //コンパイル先
+		.pipe(browserSync.stream())
+		.pipe(
+			notify({
+				message: "Sassをコンパイルしました！",
+				onLast: true,
+			})
+		);
+};
 
-gulp.task("watch", function (done) {
-	gulp.watch("./src/sass/**/*.scss", gulp.task("sass"));
-	gulp.watch("./src/sass/**/*.scss", gulp.task("bs-reload"));
-	gulp.watch("./js/*.js", gulp.task("bs-reload"));
-	gulp.watch("./*.html", gulp.task("bs-reload"));
-});
+/**
+ * html
+ */
+const html = () => {
+	return gulp.src(srcPath.html).pipe(gulp.dest(distPath.html));
+};
 
-gulp.task("browser-sync", function (done) {
-	browserSync.init({
-		server: {
-			baseDir: "./",
-			index: "index.html",
-		},
-	});
-	done();
-});
+/**
+ * ローカルサーバー立ち上げ
+ */
+const browserSyncFunc = () => {
+	browserSync.init(browserSyncOption);
+};
 
-gulp.task("bs-reload", function (done) {
+const browserSyncOption = {
+	server: distBase,
+};
+
+/**
+ * リロード
+ */
+const browserSyncReload = (done) => {
 	browserSync.reload();
 	done();
-});
+};
 
-gulp.task("imagemin", function () {
-	return gulp
-		.src("./img/**/*")
-		.pipe(imagemin(imageminOption))
-		.pipe(gulp.dest("./img"));
-});
+/**
+ * ファイル監視 ファイルの変更を検知したら、browserSyncReloadでreloadメソッドを呼び出す
+ * series 順番に実行
+ * watch('監視するファイル',処理)
+ */
+const watchFiles = () => {
+	gulp.watch(srcPath.scss, gulp.series(cssSass));
+	gulp.watch(srcPath.html, gulp.series(html, browserSyncReload));
+};
 
-gulp.task("default", gulp.series(gulp.parallel("browser-sync", "watch")));
+/**
+ * seriesは「順番」に実行
+ * parallelは並列で実行
+ */
+exports.default = gulp.series(
+	gulp.parallel(html, cssSass),
+	gulp.parallel(watchFiles, browserSyncFunc)
+);
