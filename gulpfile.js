@@ -1,9 +1,12 @@
 //gulp本体
 const gulp = require("gulp");
 
-//scss Dart Sass はSass公式が推奨 @use構文などが使える
+// scss Dart Sass はSass公式が推奨 @use構文などが使える
 const sass = require("gulp-dart-sass");
-const rename = require("gulp-rename");
+// css 縮小化
+const purgecss = require("gulp-purgecss");
+const cleancss = require("gulp-clean-css");
+// js 縮小化
 const uglify = require("gulp-uglify");
 // エラーが発生しても強制終了させない
 const plumber = require("gulp-plumber");
@@ -43,6 +46,12 @@ const cssSass = () => {
 			})
 		)
 		.pipe(sass({ outputStyle: "expanded" })) //指定できるキー expanded compressed
+		.pipe(
+			purgecss({
+				content: ["./src/*.html", "./src/**/*.js"], // src()のファイルで使用される可能性のあるファイルを全て指定
+			})
+		)
+		.pipe(cleancss())
 		.pipe(gulp.dest(distPath.css, { sourcemaps: "./" })) //コンパイル先
 		.pipe(browserSync.stream())
 		.pipe(
@@ -57,24 +66,17 @@ const cssSass = () => {
  * js
  */
 const js = () => {
-	return (
-		gulp
-			.src(srcPath.js)
-			.pipe(
-				//エラーが出ても処理を止めない
-				plumber({
-					errorHandler: notify.onError("Error:<%= error.message %>"),
-				})
-			)
-			.pipe(uglify())
-			// .pipe(
-			// 	rename({
-			// 		extname: ".min.js",
-			// 	})
-			// )
-			.pipe(gulp.dest(distPath.js))
-			.pipe(browserSync.stream())
-	);
+	return gulp
+		.src(srcPath.js)
+		.pipe(
+			//エラーが出ても処理を止めない
+			plumber({
+				errorHandler: notify.onError("Error:<%= error.message %>"),
+			})
+		)
+		.pipe(uglify())
+		.pipe(gulp.dest(distPath.js))
+		.pipe(browserSync.stream());
 };
 
 /**
