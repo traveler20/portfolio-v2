@@ -1,2 +1,67 @@
 /* p-fv
 --------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-fv {
+	&__visual {
+		position: relative;
+		width: 300px;
+		height: 300px;
+		margin: 50px auto;
+		border-radius: 50%;
+		animation: rolling 5s linear 0s infinite;
+		/* 要素内の子要素が3Dで描画されるように */
+		transform-style: preserve-3d;
+		&Element {
+			position: absolute;
+			display: inline-block;
+			width: 300px;
+			height: 300px;
+			box-sizing: border-box;
+			border: 1px solid s.$c-gray-right;
+			border-radius: 50%;
+		}
+		@keyframes rolling {
+			0% {
+				transform: rotate3d(1, 1, 1, 0deg);
+			}
+			100% {
+				transform: rotate3d(2, 2, 2, 360deg);
+			}
+		}
+	}
+
+	&__title {
+		@include s.inter($weight: 900);
+		font-size: 50px;
+		text-align: left;
+		// animation
+		overflow: hidden;
+		opacity: 0;
+		span {
+			background: s.$c-accent url("https://picsum.photos/id/1015/200/300");
+			background-clip: text;
+			-webkit-background-clip: text;
+			color: transparent;
+			// animation
+			display: block;
+			opacity: 0;
+			transform: matrix(1, 0, 0, 1, 0, 100);
+			transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+			animation: fvTitle 2s linear 0s;
+		}
+		// animation
+		&.is-show {
+			opacity: 1;
+			span {
+				opacity: 1;
+				transform: matrix(1, 0, 0, 1, 0, 0);
+			}
+		}
+	}
+}
+
+@include s.breakpoint(tablet) {
+}
+@include s.breakpoint(pc) {
+}

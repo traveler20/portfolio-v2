@@ -18,6 +18,9 @@
 /*-------------------
  * component
  -------------------*/
+@use "./object/component/inner";
+@use "./object/component/loading";
+@use "./object/component/cursor";
 @use "./object/component/button";
 
 /*-------------------

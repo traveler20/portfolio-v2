@@ -1,0 +1,23 @@
+{
+	"editor.fontSize": 15,
+	"editor.formatOnSave": true,
+	"prettier.useTabs": true,
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.defaultFormatter": "esbenp.prettier-vscode",
+	"editor.suggestSelection": "first",
+	"emmet.variables": { "lang": "ja" },
+	"vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+	"[json]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+		"editor.quickSuggestions": {
+			"strings": true
+		},
+		"editor.suggest.insertMode": "replace"
+	},
+	"workbench.colorTheme": "GitHub Dark Default",
+	"diffEditor.ignoreTrimWhitespace": false,
+	"explorer.confirmDelete": false,
+	"git.enableSmartCommit": true,
+	"ruby.format": false,
+	"php.validate.executablePath": ""
+}

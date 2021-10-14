@@ -1,0 +1,29 @@
+/* c-cursor
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-cursor {
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		z-index: 9999;
+		pointer-events: none;
+		&__bg {
+			width: 40px;
+			height: 40px;
+			border-radius: 50%;
+			background: s.$c-accent;
+			opacity: 0.5;
+			transform: translate(-50%, -50%);
+			transition: background 0.2s linear, transform 0.1s ease-out;
+		}
+
+		&.is-hovering .c-cursor__bg {
+			background: rgba($color: s.$c-accent, $alpha: 0.4);
+			transform: translate(-50%, -50%) scale(1.8);
+		}
+	}
+}

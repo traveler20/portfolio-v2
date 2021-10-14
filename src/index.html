@@ -24,11 +24,35 @@
 		<link rel="stylesheet" href="./asset/css/style.css" />
 	</head>
 	<body>
+		<div id="js-spinner" class="c-loading">
+			<div class="c-loading__spinner">
+				<span>Loading...</span>
+			</div>
+		</div>
+
+		<div class="js-cursor c-cursor">
+			<div class="c-cursor__bg"></div>
+		</div>
+
 		<!-- .l-header -->
 		<header class="l-header">
 			<div class="c-inner">
-				<a href="/"></a>
-				<nav class="l-header__nav"></nav>
+				<a class="l-header__logo" href="/">LOGO</a>
+				<nav class="l-header__nav">
+					<a href="" class="l-header__navCta">Contact</a>
+					<input type="checkbox" id="l-header__navToggle" />
+					<label for="l-header__navToggle" class="l-header__navHamburger">
+						<span></span>
+					</label>
+					<label for="l-header__navToggle" class="l-header__navClose"></label>
+					<ul class="l-header__navLists">
+						<li><a href="#">menu1</a></li>
+						<li><a href="#">menu2</a></li>
+						<li><a href="#">menu3</a></li>
+						<li><a href="#">menu4</a></li>
+						<li><a href="#">menu5</a></li>
+					</ul>
+				</nav>
 			</div>
 		</header>
 		<!-- /.l-header -->
@@ -37,8 +61,16 @@
 		<main class="l-main">
 			<!-- .p-fv -->
 			<section class="p-fv">
-				<div class="p-fv__visual"></div>
-				<h1 class="p-fv__title"></h1>
+				<div class="c-inner">
+					<div id="js-rollingball" class="p-fv__visual"></div>
+					<h1 class="p-fv__title js-loading is-show">
+						<span>
+							Solving<br />
+							with&nbsp;Design
+						</span>
+					</h1>
+					<div class="p-fv__scroll"></div>
+				</div>
 			</section>
 			<!-- /.p-fv -->
 

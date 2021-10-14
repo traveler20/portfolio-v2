@@ -2,14 +2,209 @@
 --------------------------- */
 @use "./../foundation/system" as s;
 
-header {
-	color: s.$c-base;
-}
+$header-height: 60px;
 
-@include s.breakpoint(tablet) {
-}
-@include s.breakpoint(pc) {
-	.pc-only {
+.l-header {
+	background: s.$c-base-sub;
+	height: $header-height;
+	position: sticky;
+	top: 0;
+	z-index: 1;
+
+	.c-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: $header-height;
+	}
+
+	&__logo {
+		color: s.$c-body;
+		font-weight: bold;
+	}
+
+	&__nav {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 14px;
+	}
+
+	&__navCta {
 		display: inline-block;
+		font-weight: bold;
+		padding: 3px 16px;
+		color: s.$c-base-sub;
+		background-color: s.$c-body;
+		border: solid 1px s.$c-body;
+		border-radius: 50px;
+		&:hover {
+			color: s.$c-body;
+			background-color: s.$c-base-sub;
+			text-decoration: none;
+		}
+	}
+
+	&__navLists {
+		display: none;
+		z-index: 1;
+		position: fixed;
+		top: $header-height;
+		left: 0;
+		width: 100%;
+		background: s.$c-gray-right;
+		text-align: center;
+		a {
+			color: s.$c-base-sub;
+			position: relative;
+			display: inline-block;
+			padding: 0 16px;
+			margin: 16px auto;
+			&::after {
+				position: absolute;
+				bottom: 0;
+				left: 50%;
+				content: "";
+				width: 0;
+				height: 2px;
+				background-color: s.$c-base-sub;
+				transition: 0.3s;
+				transform: translateX(-50%);
+			}
+			&:hover {
+				text-decoration: none;
+				&:after {
+					width: 100%;
+				}
+			}
+		}
+	}
+
+	&__navHamburger {
+		display: block;
+		position: relative;
+		width: 25px;
+		height: calc($header-height - 20px);
+		transition: transform 0.3s ease-in;
+		& > span,
+		& > span:before,
+		& > span:after {
+			display: block;
+			position: absolute;
+			/* 線の太さ */
+			height: 4px;
+			/* 線の長さ */
+			width: 25px;
+			background-color: #eee;
+			border-radius: 3px;
+			content: "";
+			cursor: pointer;
+		}
+		& > span {
+			top: 47%;
+			&:before {
+				transform: translateY(-9px);
+			}
+			&:after {
+				transform: translateY(9px);
+			}
+		}
+	}
+
+	&__navClose {
+		display: none;
+		position: fixed;
+		top: $header-height;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		opacity: 0;
+		transition: 0.3s ease-in-out;
+	}
+
+	/* menu toggle */
+	#l-header__navToggle {
+		display: none;
+	}
+	#l-header__navToggle:checked {
+		& + .l-header__navHamburger {
+			transform: rotate(45deg);
+			span:before,
+			span:after {
+				transform: rotate(90deg);
+			}
+		}
+		& ~ .l-header__navClose {
+			display: block;
+		}
+		& ~ .l-header__navLists {
+			display: block;
+			transition-delay: 0.3s;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+	}
+	@include s.breakpoint(pc) {
+		/* menu */
+		&__nav {
+			flex-direction: row-reverse;
+		}
+
+		&__navCta {
+			position: relative;
+			padding: 3px 32px;
+			&::before {
+				content: "";
+				position: absolute;
+				top: calc(50% - 2px);
+				right: -14px;
+				transform: translateY(calc(-50% - 2px)) rotate(30deg);
+				width: 12px;
+				height: 2px;
+				background-color: #60caad;
+				transition: 0.3s;
+			}
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				right: -14px;
+				transform: translateY(-50%);
+				width: 40px;
+				height: 2px;
+				background-color: #60caad;
+				transition: 0.3s;
+			}
+			&:hover {
+				color: s.$c-body;
+				background-color: s.$c-base-sub;
+				text-decoration: none;
+				&:before,
+				&:after {
+					right: -20px;
+				}
+			}
+		}
+
+		&__navLists {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			position: relative;
+			top: 0;
+			background: s.$c-base-sub;
+			a {
+				color: s.$c-body;
+				padding: 0 8px;
+				&:after {
+					background-color: s.$c-body;
+				}
+			}
+		}
+
+		&__navHamburger {
+			display: none;
+		}
 	}
 }
