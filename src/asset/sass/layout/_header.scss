@@ -55,6 +55,7 @@ $header-height: 60px;
 		width: 100%;
 		background: s.$c-gray-right;
 		text-align: center;
+		transition: s.$transition400ms;
 		a {
 			color: s.$c-base-sub;
 			position: relative;
@@ -69,7 +70,7 @@ $header-height: 60px;
 				width: 0;
 				height: 2px;
 				background-color: s.$c-base-sub;
-				transition: 0.3s;
+				transition: 0.4s;
 				transform: translateX(-50%);
 			}
 			&:hover {
@@ -86,7 +87,8 @@ $header-height: 60px;
 		position: relative;
 		width: 25px;
 		height: calc($header-height - 20px);
-		transition: transform 0.3s ease-in;
+		transition: transform 0.4s ease-in;
+		transition: s.$transition400ms;
 		& > span,
 		& > span:before,
 		& > span:after {
@@ -100,6 +102,7 @@ $header-height: 60px;
 			border-radius: 3px;
 			content: "";
 			cursor: pointer;
+			transition: s.$transition400ms;
 		}
 		& > span {
 			top: 47%;
@@ -120,7 +123,8 @@ $header-height: 60px;
 		width: 100%;
 		height: 100%;
 		opacity: 0;
-		transition: 0.3s ease-in-out;
+		transition: 0.4s ease-in-out;
+		transition: s.$transition400ms;
 	}
 
 	/* menu toggle */
@@ -132,6 +136,7 @@ $header-height: 60px;
 			transform: rotate(45deg);
 			span:before,
 			span:after {
+				transition: all 0.4s;
 				transform: rotate(90deg);
 			}
 		}
@@ -165,7 +170,7 @@ $header-height: 60px;
 				width: 12px;
 				height: 2px;
 				background-color: #60caad;
-				transition: 0.3s;
+				transition: 0.4s;
 			}
 			&::after {
 				content: "";
@@ -176,7 +181,7 @@ $header-height: 60px;
 				width: 40px;
 				height: 2px;
 				background-color: #60caad;
-				transition: 0.3s;
+				transition: 0.4s;
 			}
 			&:hover {
 				color: s.$c-body;
@@ -195,6 +200,7 @@ $header-height: 60px;
 			gap: 10px;
 			position: relative;
 			top: 0;
+			left: 0;
 			background: s.$c-base-sub;
 			a {
 				color: s.$c-body;

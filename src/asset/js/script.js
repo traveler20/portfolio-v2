@@ -63,7 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // js-navToggle js-navLists
-const toggle = document.getElementById("l-header__navToggle");
+const toggle = document.getElementsByClassName("js-navToggle")[0];
 const navLink = document.querySelectorAll(".l-header__navLists li a");
 
 for (let i = 0; i < navLink.length; i++) {

@@ -15,7 +15,7 @@
 		"editor.suggest.insertMode": "replace"
 	},
 	"workbench.colorTheme": "GitHub Dark Default",
-	"diffEditor.ignoreTrimWhitespace": false,
+	"diffEditor.ignoreTrimWhitespace": true,
 	"explorer.confirmDelete": false,
 	"git.enableSmartCommit": true,
 	"ruby.format": false,

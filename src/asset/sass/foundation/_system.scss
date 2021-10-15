@@ -22,6 +22,8 @@ $box-shadow: 3px 3px 3px
 $c-gray-right: #e9e9e9;
 $c-gray-dark: #9da5a0;
 
+$transition400ms: all 0.4s;
+
 // responsive system
 // ---------------------
 @mixin oswald($weight: 400) {
