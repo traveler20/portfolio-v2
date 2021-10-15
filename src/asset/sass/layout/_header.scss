@@ -46,11 +46,12 @@ $header-height: 60px;
 	}
 
 	&__navLists {
-		display: none;
 		z-index: 1;
 		position: fixed;
 		top: $header-height;
+		// top: -100%;
 		left: 0;
+		left: 100%;
 		width: 100%;
 		background: s.$c-gray-right;
 		text-align: center;
@@ -139,7 +140,8 @@ $header-height: 60px;
 		}
 		& ~ .l-header__navLists {
 			display: block;
-			transition-delay: 0.3s;
+			top: $header-height;
+			left: 0;
 		}
 	}
 

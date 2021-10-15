@@ -4,23 +4,23 @@ window.onload = function () {
 	spinner.classList.add("loaded");
 
 	// js-fvtitle 0.5秒後に実行
-	window.setTimeout(onload_fv1, 500);
-	function onload_fv1() {
-		const fvtitle = document.getElementById("js-fvtitle");
-		fvtitle.classList.add("is-animated");
-		// js-fvcontent 0.25秒後に実行
-		window.setTimeout(onload_fv2, 250);
-		function onload_fv2() {
-			const fvcontent = document.getElementById("js-fvcontent");
-			fvcontent.classList.add("is-show");
-			// js-fvbutton 0.25秒後に実行
-			window.setTimeout(onload_fv3, 250);
-			function onload_fv3() {
-				const fvbutton = document.getElementById("js-fvbutton");
-				fvbutton.classList.add("is-show");
-			}
-		}
-	}
+	// window.setTimeout(onload_fv1, 500);
+	// function onload_fv1() {
+	// 	const fvtitle = document.getElementById("js-fvtitle");
+	// 	fvtitle.classList.add("is-animated");
+	// 	// js-fvcontent 0.25秒後に実行
+	// 	window.setTimeout(onload_fv2, 250);
+	// 	function onload_fv2() {
+	// 		const fvcontent = document.getElementById("js-fvcontent");
+	// 		fvcontent.classList.add("is-show");
+	// 		// js-fvbutton 0.25秒後に実行
+	// 		window.setTimeout(onload_fv3, 250);
+	// 		function onload_fv3() {
+	// 			const fvbutton = document.getElementById("js-fvbutton");
+	// 			fvbutton.classList.add("is-show");
+	// 		}
+	// 	}
+	// }
 };
 
 // js-cursor
@@ -61,6 +61,16 @@ document.addEventListener("DOMContentLoaded", function () {
 		});
 	});
 });
+
+// js-navToggle js-navLists
+const toggle = document.getElementById("l-header__navToggle");
+const navLink = document.querySelectorAll(".l-header__navLists li a");
+
+for (let i = 0; i < navLink.length; i++) {
+	navLink[i].onclick = function () {
+		toggle.checked = false;
+	};
+}
 
 // #js-rollingball .p-fv__visual
 const ballWrap = document.getElementById("js-rollingball");
