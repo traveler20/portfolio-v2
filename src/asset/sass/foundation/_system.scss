@@ -7,11 +7,11 @@
 $c-base: #333;
 $c-base-sub: #222;
 $c-body: #fff;
-$c-accent: #60caad;
-// $c-accent-50: rgba(
-// 	$c: $c-accent,
-// 	$alpha: 0.5,
-// );
+$c-accent: #ca6060;
+$c-accent-right: rgba(
+	$color: $c-accent,
+	$alpha: 0.3,
+);
 
 $box-shadow: 3px 3px 3px
 	rgba(
@@ -31,9 +31,9 @@ $transition400ms: all 0.4s;
 	font-weight: $weight;
 }
 
-@import "https://fonts.googleapis.com/css?family=Noto+Sans+JP|Roboto&display=swap";
-@mixin notosans($weight: bold) {
-	font-family: "Noto Sans JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@mixin notosans($weight: 700) {
+	font-family: "Noto Sans", sans-serif;
 	font-weight: $weight;
 }
 
@@ -43,6 +43,15 @@ $transition400ms: all 0.4s;
 	font-weight: $weight;
 }
 
+@function get_vw($size, $viewport: 375) {
+	$rate: 100 / $viewport;
+	@return $rate * $size * 1vw;
+}
+@mixin font-size($font_size: 10) {
+	font-size: $font_size * 1px;
+	font-size: get_vw($font_size);
+}
+
 @mixin breakpoint($point) {
 	@if $point == tablet {
 		@media (min-width: 640px) {
@@ -50,7 +59,7 @@ $transition400ms: all 0.4s;
 		}
 	}
 	@if $point == pc {
-		@media (min-width: 750px) {
+		@media (min-width: 890px) {
 			@content;
 		}
 	}

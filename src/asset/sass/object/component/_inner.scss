@@ -1,5 +1,7 @@
 .c-inner {
-	padding: 10px 30px;
+	padding: 10px 20px;
+	// padding: 10px clamp(16px, 5%, 80px);
+
 	max-width: 1220px;
 	margin: 0 auto;
 }

@@ -19,6 +19,7 @@
  * component
  -------------------*/
 @use "./object/component/inner";
+@use "./object/component/section";
 @use "./object/component/loading";
 @use "./object/component/cursor";
 @use "./object/component/button";
@@ -27,8 +28,14 @@
  * project
  -------------------*/
 @use "./object/project/fv";
+@use "./object/project/about";
+@use "./object/project/work";
+@use "./object/project/service";
+@use "./object/project/profile";
+@use "./object/project/contact";
 
 /*-------------------
  * object
  -------------------*/
+@use "./object/utility/display";
 @use "./object/utility/typography";

@@ -1,0 +1,52 @@
+/* p-work
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-work {
+	&__content {
+		width: 100%;
+		overflow: hidden;
+	}
+	&__lists {
+		display: flex;
+		gap: 20px;
+		margin: 0 0 80px;
+		min-width: 100%;
+		width: min-content;
+		animation: sliderAnimation 20s linear infinite;
+		&:nth-of-type(odd) {
+			animation-direction: reverse;
+		}
+		@keyframes sliderAnimation {
+			100% {
+				transform: translateX(-50%);
+			}
+		}
+
+		> li {
+			// width: 400px;
+			// width: clamp(160px, 100%, 400px);
+			width: 160px;
+		}
+	}
+
+	&__description {
+		font-size: 1.8rem;
+		display: table;
+		margin: 0 auto 40px;
+		text-align: left;
+	}
+
+	@include s.breakpoint(tablet) {
+		&__content {
+			overflow: visible;
+		}
+		&__lists {
+			> li {
+				width: 400px;
+			}
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

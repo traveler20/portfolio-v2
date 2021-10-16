@@ -1,0 +1,44 @@
+/* p-service
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-service {
+	&__figure {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 0 100px;
+	}
+	&__figcaption {
+		display: contents;
+		font-size: 18px;
+	}
+	.c-section__subtitle {
+		order: -2;
+		width: 100%;
+	}
+	&__figure > img {
+		order: -1;
+		margin-bottom: 20px;
+	}
+	@include s.breakpoint(tablet) {
+		&__figure {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-evenly;
+			gap: 8px;
+			&:nth-of-type(even) {
+				flex-direction: row-reverse;
+			}
+		}
+		&__figcaption,
+		&__figure > img {
+			display: block;
+			min-width: 300px;
+			width: 45%;
+			max-width: 800px;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}

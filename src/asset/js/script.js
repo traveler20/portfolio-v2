@@ -3,24 +3,24 @@ window.onload = function () {
 	const spinner = document.getElementById("js-spinner");
 	spinner.classList.add("loaded");
 
-	// js-fvtitle 0.5秒後に実行
-	// window.setTimeout(onload_fv1, 500);
-	// function onload_fv1() {
-	// 	const fvtitle = document.getElementById("js-fvtitle");
-	// 	fvtitle.classList.add("is-animated");
-	// 	// js-fvcontent 0.25秒後に実行
-	// 	window.setTimeout(onload_fv2, 250);
-	// 	function onload_fv2() {
-	// 		const fvcontent = document.getElementById("js-fvcontent");
-	// 		fvcontent.classList.add("is-show");
-	// 		// js-fvbutton 0.25秒後に実行
-	// 		window.setTimeout(onload_fv3, 250);
-	// 		function onload_fv3() {
-	// 			const fvbutton = document.getElementById("js-fvbutton");
-	// 			fvbutton.classList.add("is-show");
-	// 		}
-	// 	}
-	// }
+	// js-fvTitle1 0.5秒後に実行
+	window.setTimeout(onload_fv1, 500);
+	function onload_fv1() {
+		const fvTitle1 = document.getElementById("js-fvTitle1");
+		fvTitle1.classList.add("is-show");
+		// js-fvTitle2 0.25秒後に実行
+		window.setTimeout(onload_fv2, 250);
+		function onload_fv2() {
+			const fvTitle2 = document.getElementById("js-fvTitle2");
+			fvTitle2.classList.add("is-show");
+			// js-headerIn 5秒後に実行
+			window.setTimeout(onload_fv3, 500);
+			function onload_fv3() {
+				const headerIn = document.getElementById("js-headerIn");
+				headerIn.classList.add("is-show");
+			}
+		}
+	}
 };
 
 // js-cursor
@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 });
 
-// js-navToggle js-navLists
+// #js-navToggle js-navLists
 const toggle = document.getElementsByClassName("js-navToggle")[0];
 const navLink = document.querySelectorAll(".l-header__navLists li a");
 
@@ -85,7 +85,19 @@ for (let i = 0; i < 180; i++) {
 	ballWrap.appendChild(ballClone);
 }
 
-// js-fadein
+// // .js-innerspan
+// const innerspan = document.querySelector(".js-innerspan");
+
+// innerspan.innerHTML = innerspan.textContent.replace(/\S/g, "<span>$&</span>");
+
+// // innerspan span insert rotate element
+// const element = document.querySelectorAll("span");
+// for (let i = 0; i < element.length; i++) {
+// 	element[i].style.transition =
+// 		"1s cubic-bezier(0.22, 1, 0.36, 1)" + i * 0.06 + "s";
+// }
+
+// .js-fadein
 function showElementAnimation() {
 	/* js-fadeInの値をelementに代入 */
 	const element = document.getElementsByClassName("js-fadeIn");

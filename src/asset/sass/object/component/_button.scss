@@ -1,2 +1,75 @@
 /* c-button
 --------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-button {
+	text-align: center;
+
+	h3 {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 2rem;
+		margin-bottom: 18px;
+		&::before,
+		&::after {
+			content: "";
+			width: 2px;
+			height: 32px;
+			background-color: s.$c-body;
+		}
+		&::before {
+			margin-right: 30px;
+			transform: rotate(-35deg);
+		}
+		&::after {
+			margin-left: 30px;
+			transform: rotate(35deg);
+		}
+	}
+
+	a {
+		display: inline-block;
+		font-size: 2.4rem;
+		font-weight: bold;
+		padding: 3px 56px;
+		color: s.$c-base;
+		background-color: s.$c-body;
+		border: solid 1px s.$c-body;
+		border-radius: 50px;
+		width: clamp(270px, 90%, 400px);
+
+		position: relative;
+		&::before {
+			content: "";
+			position: absolute;
+			top: calc(50% - 2px);
+			right: -24px;
+			transform: translateY(calc(-50% - 2px)) rotate(30deg);
+			width: 18px;
+			height: 2px;
+			background-color: s.$c-accent;
+			transition: 0.4s;
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 50%;
+			right: -24px;
+			transform: translateY(-50%);
+			width: 56px;
+			height: 2px;
+			background-color: s.$c-accent;
+			transition: 0.4s;
+		}
+		&:hover {
+			color: s.$c-body;
+			background-color: transparent;
+			text-decoration: none;
+			&:before,
+			&:after {
+				right: -32px;
+			}
+		}
+	}
+}

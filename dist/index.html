@@ -35,7 +35,7 @@
 		</div>
 
 		<!-- .l-header -->
-		<header class="l-header">
+		<header class="l-header" id="js-headerIn">
 			<div class="c-inner">
 				<a class="l-header__logo" href="/">LOGO</a>
 				<nav class="l-header__nav">
@@ -50,10 +50,10 @@
 					</label>
 					<label for="l-header__navToggle" class="l-header__navClose"></label>
 					<ul class="l-header__navLists js-navLists">
-						<li><a href="#about">ABOUT</a></li>
-						<li><a href="#work">WORK</a></li>
-						<li><a href="#service">SERVICE</a></li>
-						<li><a href="#profile">Profile</a></li>
+						<li><a href="#about">about</a></li>
+						<li><a href="#work">work</a></li>
+						<li><a href="#service">service</a></li>
+						<li><a href="#profile">profile</a></li>
 					</ul>
 				</nav>
 			</div>
@@ -65,25 +65,47 @@
 			<!-- .p-fv -->
 			<section class="p-fv">
 				<div class="c-inner">
-					<div id="js-rollingball" class="p-fv__visual"></div>
-					<h1 class="p-fv__title js-loading is-show">
-						<span>
-							Solving<br />
-							with&nbsp;Design
-						</span>
+					<article class="p-fv__visual">
+						<div class="p-fv__visual__ball" id="js-rollingball"></div>
+					</article>
+					<h1 class="p-fv__title js-loading">
+						<span id="js-fvTitle1">Solving</span>
+						<span id="js-fvTitle2">with&nbsp;Design</span>
 					</h1>
-					<div class="p-fv__scroll"></div>
+					<a href="#about" class="p-fv__scroll">scroll</a>
 				</div>
+				<ul class="p-fv__circles">
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+					<li></li>
+				</ul>
 			</section>
 			<!-- /.p-fv -->
 
 			<!-- .p-about c-section -->
 			<section class="p-about c-section" id="about">
 				<div class="c-section__inner">
-					<h2 class="c-section__title"></h2>
+					<h2 class="c-section__title" data-en="about">理念</h2>
 					<dl class="p-about__content">
-						<dt></dt>
-						<dd></dd>
+						<dt>Vision</dt>
+						<dd>デザインで世の中をよくする</dd>
+					</dl>
+					<dl class="p-about__content">
+						<dt>Mission</dt>
+						<dd>
+							<span class="u-inline-block">潜在的な課題を発見し</span
+							><span class="u-inline-block">デザインで解決する</span>
+							<p>
+								ただデザイン・コーディングするだけではなく潜在的な課題を仮説立てて解決するよう貢献します。
+							</p>
+						</dd>
 					</dl>
 				</div>
 			</section>
@@ -92,16 +114,111 @@
 			<!-- .p-work c-section -->
 			<section class="p-work c-section" id="work">
 				<div class="c-section__inner">
-					<h2 class="c-section__title"></h2>
-					<h3 class="c-section__subtitle"></h3>
-					<ul class="p-work__lists">
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-						<li></li>
-					</ul>
+					<h2 class="c-section__title" data-en="work">制作実績</h2>
+					<article class="p-work__content">
+						<h3 class="c-section__subtitle" data-en="Web design">
+							<span>コーディング/デザイン</span>
+						</h3>
+						<ul class="p-work__lists">
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+						</ul>
+						<h3 class="c-section__subtitle" data-en="Others">
+							<span>その他制作実績</span>
+						</h3>
+						<ul class="p-work__lists">
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+							<li>
+								<img
+									src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+									alt=""
+									loading="lazy"
+								/>
+							</li>
+						</ul>
+					</article>
+
+					<p class="p-work__description">
+						その他、印刷通販サイトでのコーディング経験やスタートアップ企業のランディングページ制作・運用経験があります。
+					</p>
+					<div class="c-button">
+						<h3>詳細はこちらから</h3>
+						<a href="#contact">問い合わせる</a>
+					</div>
 				</div>
 			</section>
 			<!-- /.p-work c-section -->
@@ -109,12 +226,35 @@
 			<!-- .p-service c-section -->
 			<section class="p-service c-section" id="service">
 				<div class="c-section__inner">
-					<h2 class="c-section__title"></h2>
+					<h2 class="c-section__title" data-en="service">事業内容</h2>
 					<figure class="p-service__figure">
-						<img src="" alt="" />
+						<img
+							src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
+							alt=""
+							loading="lazy"
+						/>
 						<figcaption class="p-service__figcaption">
-							<h3 class="c-section__subtitle"></h3>
-							<p></p>
+							<h3 class="c-section__subtitle" data-en="Web design">
+								<span>サイトデザイン・運用事業</span>
+							</h3>
+							<p>
+								WEBサイトのデザインからコーディング、WordPressの組み込みやサーバーへのアップまで一貫した業務が可能です。<br />
+							</p>
+						</figcaption>
+					</figure>
+					<figure class="p-service__figure">
+						<img
+							src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
+							alt=""
+							loading="lazy"
+						/>
+						<figcaption class="p-service__figcaption">
+							<h3 class="c-section__subtitle" data-en="Web design">
+								<span>サイトデザイン・運用事業</span>
+							</h3>
+							<p>
+								WEBサイトのデザインからコーディング、WordPressの組み込みやサーバーへのアップまで一貫した業務が可能です。<br />
+							</p>
 						</figcaption>
 					</figure>
 				</div>
@@ -124,16 +264,27 @@
 			<!-- .p-profile c-section -->
 			<section class="p-profile c-section" id="profile">
 				<div class="c-section__inner">
-					<h2 class="c-section__title"></h2>
+					<h2 class="c-section__title" data-en="profile">自分について</h2>
 					<figure class="p-profile__figure">
-						<img src="" alt="" />
+						<img
+							src="https://traveler20.site/portfolio/asset/img/businesscard-profile.png"
+							alt=""
+						/>
 						<figcaption class="p-profile__figcaption">
-							<h3 class="c-section__subtitle"></h3>
-							<p></p>
+							<h3 class="c-section__subtitle" data-en="Greeting">
+								<span>あいさつ</span>
+							</h3>
+							<p>WEB Developer. WEB Designer.</p>
+							<p>
+								WEBデザイナーのtraveler20といいます。コーディングを中心にデザイン、コーディング、サーバー関係、プログラミング、SEO等を仕事で携わってきました。
+							</p>
+							<p>
+								ただLPやホームページをつくっておわりではなく、WEBサイトを継続的に運用しながら目的を達成するよう寄り添って考えることができますので、お気軽にご相談いただければと思います。
+							</p>
 							<ul>
-								<li><a href=""></a></li>
-								<li><a href=""></a></li>
-								<li><a href=""></a></li>
+								<li><a href="https://www.facebook.com/O.traveler20/"></a></li>
+								<li><a href="https://www.wantedly.com/id/traveler20"></a></li>
+								<!-- <li><a href="">Portfolio</a></li> -->
 							</ul>
 						</figcaption>
 					</figure>
@@ -144,7 +295,7 @@
 			<!-- .p-contact c-section -->
 			<section class="p-contact c-section" id="contact">
 				<div class="c-section__inner">
-					<h2 class="c-section__title"></h2>
+					<h2 class="c-section__title" data-en="contact">お問い合わせ</h2>
 					<div class="p-contact__content"></div>
 				</div>
 			</section>
@@ -155,10 +306,13 @@
 		<!-- .l-footer -->
 		<footer class="l-footer">
 			<div class="c-inner">
+				<a class="l-footer__logo" href="/">LOGO</a>
 				<ul class="l-footer__lists">
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
-					<li><a href=""></a></li>
+					<li><a href="#about">about</a></li>
+					<li><a href="#work">work</a></li>
+					<li><a href="#service">service</a></li>
+					<li><a href="#profile">profile</a></li>
+					<li><a href="#contact">contact</a></li>
 				</ul>
 			</div>
 		</footer>

@@ -1,2 +1,43 @@
 /* l-footer
 --------------------------- */
+@use "./../foundation/system" as s;
+
+.l-footer {
+	background: #000;
+
+	.c-inner {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__logo {
+		color: s.$c-body;
+		font-weight: bold;
+	}
+
+	&__lists {
+		li {
+			display: none;
+		}
+		li:last-of-type {
+			display: block;
+		}
+		a {
+			color: s.$c-body;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+		&__lists {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			gap: 14px;
+			text-transform: uppercase;
+			padding: 20px 0;
+		}
+	}
+	@include s.breakpoint(pc) {
+	}
+}
