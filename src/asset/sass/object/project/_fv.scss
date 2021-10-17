@@ -4,7 +4,9 @@
 
 .p-fv {
 	height: 90vh;
-	position: relative;
+	position: sticky;
+	top: 0;
+	z-index: -1;
 	margin-bottom: -96px;
 
 	&__circles {
@@ -106,33 +108,68 @@
 	}
 
 	&__visual {
-		&__ball {
-			position: relative;
-			width: 300px;
-			height: 300px;
-			margin: 50px auto;
-			border-radius: 50%;
-			animation: rolling 5s linear 0s infinite;
-			/* 要素内の子要素が3Dで描画されるように */
-			transform-style: preserve-3d;
-		}
-		&Element {
-			position: absolute;
-			display: inline-block;
-			width: 300px;
-			height: 300px;
-			box-sizing: border-box;
-			border: 1px solid s.$c-gray-right;
-			border-radius: 50%;
-		}
-		@keyframes rolling {
+		position: relative;
+		margin: 50px auto;
+		width: 300px;
+		// height: 300px;
+		aspect-ratio: 1/1;
+		border-radius: 50%;
+		background-color: s.$c-base;
+		background: linear-gradient(
+			45deg,
+			s.$c-base,
+			rgba($color: s.$c-base, $alpha: 0.8)
+		);
+		animation: visual 20s linear infinite;
+		@keyframes visual {
 			0% {
-				transform: rotate3d(1, 1, 1, 0deg);
+				background-position: 0 0;
+			}
+			50% {
+				background-position: 400% 0;
 			}
 			100% {
-				transform: rotate3d(2, 2, 2, 360deg);
+				background-position: 0 0;
 			}
 		}
+
+		&:before,
+		&:after {
+			content: "";
+			position: absolute;
+			top: -2px;
+			left: -2px;
+			border-radius: 50%;
+			color: rgba($color: s.$c-accent, $alpha: 1);
+			background: linear-gradient(
+				45deg,
+				s.$c-accent,
+				rgba($color: s.$c-accent, $alpha: 0.2),
+				rgba($color: s.$c-accent, $alpha: 0.8),
+				rgba($color: s.$c-accent, $alpha: 0.4),
+				rgba($color: s.$c-accent, $alpha: 0.6)
+			);
+			width: calc(100% + 4px);
+			height: calc(100% + 4px);
+			background-size: 400%;
+			z-index: -1;
+			animation: shadow 20s linear infinite;
+		}
+		@keyframes shadow {
+			0% {
+				background-position: 0 0;
+			}
+			50% {
+				background-position: 400% 0;
+			}
+			100% {
+				background-position: 0 0;
+			}
+		}
+
+		// &:after {
+		// 	filter: blur(20px);
+		// }
 	}
 
 	&__title {
@@ -226,18 +263,10 @@
 			grid-area: 1/-1;
 		}
 		&__visual {
-			width: 90vw;
+			// width: 90vw;
 			max-width: 1220px;
-			&__ball {
-				width: 400px;
-				height: 400px;
-				margin: 50px auto 50px 0;
-			}
-			&Element {
-				width: 400px;
-				height: 400px;
-				border-width: 2px;
-			}
+			height: 80%;
+			width: auto;
 		}
 		&__title {
 			font-size: 10rem;

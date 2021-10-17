@@ -33,19 +33,6 @@ for (let i = 0; i < navLink.length; i++) {
 	};
 }
 
-// #js-rollingball .p-fv__visual
-const ballWrap = document.getElementById("js-rollingball");
-const ballElement = document.createElement("span");
-ballElement.className = "p-fv__visualElement";
-
-for (let i = 0; i < 180; i++) {
-	const ballClone = ballElement.cloneNode();
-	const ballCloneStyle = ballClone.style;
-	//1deg ずつずらして180度分重ねる
-	ballCloneStyle.transform = "rotateY(" + i + "deg)";
-	ballWrap.appendChild(ballClone);
-}
-
 // // .js-innerspan
 // const innerspan = document.querySelector(".js-innerspan");
 

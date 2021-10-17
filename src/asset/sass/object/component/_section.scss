@@ -3,12 +3,17 @@
 @use "./../../foundation/system" as s;
 
 .c-section {
-	padding: 40px 0 260px;
+	padding: 120px 0 260px;
+	clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%);
+	background-color: s.$c-base;
+	margin-bottom: -100px;
 
 	&:nth-of-type(even) {
 		clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%);
-		padding-top: 120px;
 		background-color: s.$c-base-sub;
+	}
+	&:last-of-type {
+		margin-bottom: 0;
 	}
 
 	&__inner {
