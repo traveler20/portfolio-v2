@@ -10,8 +10,6 @@ const cleancss = require("gulp-clean-css");
 const uglify = require("gulp-uglify");
 // img 縮小化
 const imagemin = require("gulp-imagemin");
-const imageminPngquant = require("imagemin-pngquant");
-const imageminMozjpeg = require("imagemin-mozjpeg");
 // エラーが発生しても強制終了させない
 const plumber = require("gulp-plumber");
 // エラー発生時のアラート出力
@@ -21,7 +19,7 @@ const browserSync = require("browser-sync");
 
 // 入出力するフォルダを指定
 const srcBase = "./src";
-const distBase = "./dist";
+const docsBase = "./docs";
 
 const srcPath = {
 	scss: srcBase + "/asset/sass/**/*.scss",
@@ -30,11 +28,11 @@ const srcPath = {
 	html: srcBase + "/*.html",
 };
 
-const distPath = {
-	css: distBase + "/asset/css/",
-	js: distBase + "/asset/js/",
-	img: distBase + "/asset/img/",
-	html: distBase + "/",
+const docsPath = {
+	css: docsBase + "/asset/css/",
+	js: docsBase + "/asset/js/",
+	img: docsBase + "/asset/img/",
+	html: docsBase + "/",
 };
 
 /**
@@ -58,7 +56,7 @@ const cssSass = () => {
 			})
 		)
 		.pipe(cleancss())
-		.pipe(gulp.dest(distPath.css, { sourcemaps: "./" })) //コンパイル先
+		.pipe(gulp.dest(docsPath.css, { sourcemaps: "./" })) //コンパイル先
 		.pipe(browserSync.stream())
 		.pipe(
 			notify({
@@ -81,7 +79,7 @@ const js = () => {
 			})
 		)
 		.pipe(uglify())
-		.pipe(gulp.dest(distPath.js))
+		.pipe(gulp.dest(docsPath.js))
 		.pipe(browserSync.stream());
 };
 
@@ -104,7 +102,7 @@ const img = () => {
 				imagemin.gifsicle({ optimizationLevel: 3 }),
 			])
 		)
-		.pipe(gulp.dest(distPath.img))
+		.pipe(gulp.dest(docsPath.img))
 		.pipe(browserSync.stream());
 };
 
@@ -112,7 +110,7 @@ const img = () => {
  * html
  */
 const html = () => {
-	return gulp.src(srcPath.html).pipe(gulp.dest(distPath.html));
+	return gulp.src(srcPath.html).pipe(gulp.dest(docsPath.html));
 };
 
 /**
@@ -123,7 +121,7 @@ const browserSyncFunc = () => {
 };
 
 const browserSyncOption = {
-	server: distBase,
+	server: docsBase,
 };
 
 /**
