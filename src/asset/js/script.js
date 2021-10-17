@@ -23,45 +23,6 @@ window.onload = function () {
 	}
 };
 
-// js-cursor
-document.addEventListener("DOMContentLoaded", function () {
-	const cursor = document.querySelector(".js-cursor");
-	const links = document.querySelectorAll("a");
-	const links2 = document.querySelectorAll("summary");
-
-	// cursorを追従させる機能
-	document.addEventListener("mousemove", function (e) {
-		const x = e.pageX - window.pageXOffset;
-		const y = e.pageY - window.pageYOffset;
-
-		cursor.style.transform = "translate(" + x + "px," + y + "px)";
-	});
-
-	// linksホバー時の機能
-	Array.prototype.forEach.call(links, function (link) {
-		// linksホバー時is-hoveringクラス付与
-		link.addEventListener("mouseenter", function () {
-			cursor.classList.add("is-hovering");
-		});
-
-		//linksホバー時is-hoveringクラス削除
-		link.addEventListener("mouseleave", function () {
-			cursor.classList.remove("is-hovering");
-		});
-	});
-	Array.prototype.forEach.call(links2, function (link) {
-		// linksホバー時is-hoveringクラス付与
-		link.addEventListener("mouseenter", function () {
-			cursor.classList.add("is-hovering");
-		});
-
-		//linksホバー時is-hoveringクラス削除
-		link.addEventListener("mouseleave", function () {
-			cursor.classList.remove("is-hovering");
-		});
-	});
-});
-
 // #js-navToggle js-navLists
 const toggle = document.getElementsByClassName("js-navToggle")[0];
 const navLink = document.querySelectorAll(".l-header__navLists li a");
@@ -128,3 +89,47 @@ function showElementAnimation() {
 /* 関数showElementAnimationを実行 */
 showElementAnimation();
 window.addEventListener("scroll", showElementAnimation);
+
+if (window.matchMedia("(min-width: 640px)").matches) {
+	//PC環境の場合
+	// js-cursor
+	document.addEventListener("DOMContentLoaded", function () {
+		const cursor = document.querySelector(".js-cursor");
+		const links = document.querySelectorAll("a");
+		const links2 = document.querySelectorAll(".js-service__hovering");
+
+		// cursorを追従させる機能
+		document.addEventListener("mousemove", function (e) {
+			const x = e.pageX - window.pageXOffset;
+			const y = e.pageY - window.pageYOffset;
+
+			cursor.style.transform = "translate(" + x + "px," + y + "px)";
+		});
+
+		// linksホバー時の機能
+		Array.prototype.forEach.call(links, function (link) {
+			// linksホバー時is-hoveringクラス付与
+			link.addEventListener("mouseenter", function () {
+				cursor.classList.add("is-hovering");
+			});
+
+			//linksホバー時is-hoveringクラス削除
+			link.addEventListener("mouseleave", function () {
+				cursor.classList.remove("is-hovering");
+			});
+		});
+		Array.prototype.forEach.call(links2, function (link2) {
+			// linksホバー時is-hoveringクラス付与
+			link2.addEventListener("mouseenter", function () {
+				cursor.classList.add("is-hovering--service");
+			});
+
+			//linksホバー時is-hoveringクラス削除
+			link2.addEventListener("mouseleave", function () {
+				cursor.classList.remove("is-hovering--service");
+			});
+		});
+	});
+	//モバイル環境の場合
+} else {
+}

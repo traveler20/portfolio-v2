@@ -21,9 +21,11 @@
 			transition: background 0.2s linear, transform 0.1s ease-out;
 		}
 
-		&.is-hovering .c-cursor__bg {
-			background: rgba($color: s.$c-accent, $alpha: 0.4);
-			transform: translate(-50%, -50%) scale(1.8);
+		&.is-hovering {
+			.c-cursor__bg {
+				background: rgba($color: s.$c-accent, $alpha: 0.4);
+				transform: translate(-50%, -50%) scale(1.8);
+			}
 		}
 	}
 }

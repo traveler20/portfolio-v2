@@ -69,8 +69,7 @@
 			left: 0;
 			color: s.$c-accent-right;
 			font-size: 4rem;
-			font-family: luxus-brut, cursive;
-			// font-weight: bold;
+			@include s.cursive($weight: 900);
 			font-style: italic;
 		}
 	}

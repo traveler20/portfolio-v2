@@ -144,7 +144,7 @@
 		text-align: left;
 		span {
 			background-color: s.$c-accent;
-			// background: s.$c-accent url("./../img/fv-title-bg.png");
+			// background: s.$c-accent ur l("./../img/fv-title-bg.png");
 			background-position: bottom;
 			background-clip: text;
 			-webkit-background-clip: text;
@@ -154,8 +154,6 @@
 			opacity: 0;
 			transform: matrix(1, 0, 0, 1, 0, 100);
 			transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
-			animation: fvTitle 2s linear 0s;
-			// animation
 			&.is-show {
 				opacity: 1;
 				transform: matrix(1, 0, 0, 1, 0, 0);
