@@ -26,6 +26,10 @@ $header-height: 60px;
 	&__logo {
 		color: s.$c-body;
 		font-weight: bold;
+		svg {
+			width: 320px;
+			max-width: 80%;
+		}
 	}
 
 	&__nav {

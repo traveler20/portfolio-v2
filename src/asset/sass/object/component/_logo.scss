@@ -1,0 +1,29 @@
+/* c-logo
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.c-logo {
+	&__text {
+		fill: s.$c-body;
+	}
+	&__icon {
+		fill: none;
+		stroke: s.$c-accent;
+		stroke-linejoin: round;
+		stroke-width: 18px;
+		animation: logoicon 5s linear infinite alternate;
+		@keyframes logoicon {
+			0% {
+				stroke: s.$c-accent;
+			}
+			100% {
+				stroke: s.$c-accent-right;
+			}
+		}
+	}
+	&__iconSub {
+		stroke: s.$c-body;
+		stroke-miterlimit: 10;
+		stroke-width: 20px;
+	}
+}

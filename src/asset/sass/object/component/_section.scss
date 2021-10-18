@@ -6,10 +6,10 @@
 	padding: 120px 0 260px;
 	clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%);
 	background-color: s.$c-base;
+	width: 100vw;
 	margin-bottom: -100px;
 
 	&:nth-of-type(even) {
-		clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 94%);
 		background-color: s.$c-base-sub;
 	}
 	&:last-of-type {
@@ -42,6 +42,14 @@
 			font-size: 8rem;
 			font-weight: bold;
 			z-index: -1;
+			opacity: 0;
+			transform: translateX(-50%);
+			transform: translate(-50%, 200%);
+			transition: 1s cubic-bezier(0.22, 1, 0.36, 1);
+		}
+		&.is-show:before {
+			opacity: 1;
+			transform: translate(-50%, 0);
 		}
 		&::after {
 			content: "";
@@ -65,6 +73,11 @@
 		margin-bottom: 24px;
 		span {
 			position: relative;
+			transition: 0.5s cubic-bezier(0.37, 0, 0.63, 1);
+			clip-path: inset(0 100% 0 0);
+		}
+		&.is-show span {
+			clip-path: inset(0);
 		}
 		&::before {
 			content: attr(data-en);

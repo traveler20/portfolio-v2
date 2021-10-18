@@ -7,13 +7,22 @@
 
 	.c-inner {
 		display: flex;
+		flex-wrap: wrap;
 		align-items: center;
 		justify-content: space-between;
+		padding: 32px 20px 60px;
+	}
+	a {
+		color: s.$c-body;
 	}
 
 	&__logo {
 		color: s.$c-body;
 		font-weight: bold;
+		svg {
+			width: 160px;
+			max-width: 80%;
+		}
 	}
 
 	&__lists {
@@ -23,9 +32,13 @@
 		li:last-of-type {
 			display: block;
 		}
-		a {
-			color: s.$c-body;
-		}
+	}
+
+	&__rights {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		gap: 10px;
 	}
 
 	@include s.breakpoint(tablet) {

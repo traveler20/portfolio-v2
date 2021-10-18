@@ -8,6 +8,13 @@
 		flex-direction: column;
 		align-items: center;
 		margin: 0 0 100px;
+		opacity: 0;
+		transform: translateY(40px);
+		transition: all 1.5s;
+		&.is-show {
+			opacity: 1;
+			transform: translateY(0px);
+		}
 	}
 	&__figcaption {
 		display: contents;
@@ -27,8 +34,15 @@
 			flex-wrap: wrap;
 			justify-content: space-evenly;
 			gap: 8px;
+			transform: translateY(0px);
+			transform: translateX(40px);
 			&:nth-of-type(even) {
 				flex-direction: row-reverse;
+				transform: translateX(-40px);
+			}
+			&.is-show {
+				opacity: 1;
+				transform: translateX(0px);
 			}
 		}
 		&__figcaption,

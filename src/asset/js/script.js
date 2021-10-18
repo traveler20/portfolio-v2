@@ -13,11 +13,17 @@ window.onload = function () {
 		function onload_fv2() {
 			const fvTitle2 = document.getElementById("js-fvTitle2");
 			fvTitle2.classList.add("is-show");
-			// js-headerIn 5秒後に実行
+			// js-headerIn 0.5秒後に実行
 			window.setTimeout(onload_fv3, 500);
 			function onload_fv3() {
 				const headerIn = document.getElementById("js-headerIn");
 				headerIn.classList.add("is-show");
+				// js-fvScroll 1秒後に実行
+				window.setTimeout(onload_fv3, 1000);
+				function onload_fv3() {
+					const fvScroll = document.getElementById("js-fvScroll");
+					fvScroll.classList.add("is-show");
+				}
 			}
 		}
 	}
@@ -49,17 +55,21 @@ for (let i = 0; i < navLink.length; i++) {
 // };
 // update();
 
-// // .js-innerspan
-// const innerspan = document.querySelector(".js-innerspan");
+// .js-innerspan
+// innerspan definition
+const innerspan = document.querySelector(".js-innerspan");
+// const innerspan = document.getElementsByClassName("js-innerspan");
+// const innerspan = document.getElementById("js-innerspan");
 
-// innerspan.innerHTML = innerspan.textContent.replace(/\S/g, "<span>$&</span>");
+// innerspan insert span
+innerspan.innerHTML = innerspan.textContent.replace(/\S/g, "<span>$&</span>");
 
-// // innerspan span insert rotate element
-// const element = document.querySelectorAll("span");
-// for (let i = 0; i < element.length; i++) {
-// 	element[i].style.transition =
-// 		"1s cubic-bezier(0.22, 1, 0.36, 1)" + i * 0.06 + "s";
-// }
+// innerspan span insert rotate spanelement
+const spanelement = document.querySelectorAll("span");
+for (let i = 0; i < spanelement.length; i++) {
+	spanelement[i].style.transition =
+		"1s cubic-bezier(0.22, 1, 0.36, 1)" + i * 0.05 + "s";
+}
 
 // .js-fadein
 function showElementAnimation() {

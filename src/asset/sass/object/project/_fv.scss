@@ -5,8 +5,7 @@
 .p-fv {
 	height: 90vh;
 	position: sticky;
-	top: 0;
-	z-index: -1;
+	top: -270px;
 	margin-bottom: -96px;
 
 	&__circles {
@@ -109,7 +108,7 @@
 
 	&__visual {
 		position: relative;
-		margin: 50px auto;
+		margin: 18px auto;
 		width: 300px;
 		// height: 300px;
 		aspect-ratio: 1/1;
@@ -174,10 +173,8 @@
 
 	&__title {
 		@include s.inter($weight: 900);
-		// @include s.notosans($weight: 900);
 		@include s.font-size(54);
 		line-height: normal;
-		// font-size: 6rem;
 		text-align: left;
 		span {
 			background-color: s.$c-accent;
@@ -217,6 +214,11 @@
 		letter-spacing: 3px;
 		-ms-writing-mode: tb-rl;
 		writing-mode: vertical-lr;
+		opacity: 0;
+		&.is-show {
+			transition: 0.8s;
+			opacity: 1;
+		}
 		&::after {
 			position: absolute;
 			bottom: 0;
@@ -270,7 +272,7 @@
 		}
 		&__title {
 			font-size: 10rem;
-			justify-self: end;
+			justify-self: center;
 		}
 	}
 	@include s.breakpoint(pc) {
