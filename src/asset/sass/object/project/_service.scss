@@ -35,10 +35,10 @@
 			justify-content: space-evenly;
 			gap: 8px;
 			transform: translateY(0px);
-			transform: translateX(40px);
+			transform: translateX(-40px);
 			&:nth-of-type(even) {
 				flex-direction: row-reverse;
-				transform: translateX(-40px);
+				transform: translateX(40px);
 			}
 			&.is-show {
 				opacity: 1;

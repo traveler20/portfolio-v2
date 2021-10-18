@@ -44,6 +44,12 @@ $transition400ms: all 0.4s;
 	font-weight: $weight;
 }
 
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
+@mixin railway($weight: bold) {
+	font-family: "Raleway", sans-serif;
+	font-weight: $weight;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap");
 @mixin cursive($weight: 700) {
 	font-family: "Dancing Script", cursive;

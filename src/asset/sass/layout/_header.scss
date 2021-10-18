@@ -2,7 +2,7 @@
 --------------------------- */
 @use "./../foundation/system" as s;
 
-$header-height: 60px;
+$header-height: 80px;
 
 .l-header {
 	height: $header-height;
@@ -27,7 +27,7 @@ $header-height: 60px;
 		color: s.$c-body;
 		font-weight: bold;
 		svg {
-			width: 320px;
+			width: 240px;
 			max-width: 80%;
 		}
 	}

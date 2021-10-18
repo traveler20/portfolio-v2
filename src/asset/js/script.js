@@ -39,29 +39,8 @@ for (let i = 0; i < navLink.length; i++) {
 	};
 }
 
-// // .js-service
-// const section = document.querySelectorAll(".js-service")[0];
-// let currentPos = window.pageYOffset;
-// const update = () => {
-// 	const newPos = window.pageYOffset;
-// 	const diff = newPos - currentPos;
-// 	const speed = diff * 0.35;
-
-// 	section.style.transform = `skewY(${speed}deg)`;
-
-// 	currentPos = newPos;
-
-// 	requestAnimationFrame(update);
-// };
-// update();
-
 // .js-innerspan
-// innerspan definition
 const innerspan = document.querySelector(".js-innerspan");
-// const innerspan = document.getElementsByClassName("js-innerspan");
-// const innerspan = document.getElementById("js-innerspan");
-
-// innerspan insert span
 innerspan.innerHTML = innerspan.textContent.replace(/\S/g, "<span>$&</span>");
 
 // innerspan span insert rotate spanelement
