@@ -1,4 +1,4 @@
-        get_header()
+		<?php get_header('front'); ?>
 
 		<!-- main -->
 		<main>
@@ -241,11 +241,13 @@
 					<h2 class="c-section__title js-fadeIn" data-en="contact">
 						お問い合わせ
 					</h2>
-					<div class="p-contact__content"></div>
+					<div class="p-contact__content">
+						<?php echo do_shortcode('[contact-form-7 id="72" title="Contact form 1"]'); ?>
+					</div>
 				</div>
 			</section>
 			<!-- /.p-contact c-section -->
 		</main>
 		<!-- /main -->
 
-        get_footer()
+		<?php get_footer('front'); ?>

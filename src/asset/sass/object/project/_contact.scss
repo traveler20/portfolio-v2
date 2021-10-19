@@ -3,5 +3,43 @@
 .p-contact {
 	&.p-contact {
 		clip-path: polygon(0% 0%, 100% 6%, 100% 100%, 0% 100%);
+		padding: 120px 0 120px;
+	}
+
+	label {
+		display: block;
+		margin-bottom: 20px;
+	}
+
+	input[type="submit"] {
+		color: s.$c-base-sub;
+		text-align: center;
+		font-size: 24px;
+		font-weight: bold;
+		background-color: s.$c-body;
+		border: solid 1px s.$c-body;
+		border-radius: 8px;
+		&:hover {
+			color: s.$c-body;
+			background-color: s.$c-base-sub;
+		}
+	}
+
+	@include s.breakpoint(tablet) {
+		label {
+			display: block;
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
+		.wpcf7-form-control-wrap {
+			width: 70%;
+		}
+	}
+	@include s.breakpoint(pc) {
+		&__content {
+			width: 80%;
+			margin: 0 auto;
+		}
 	}
 }

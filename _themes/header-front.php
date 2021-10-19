@@ -22,13 +22,13 @@
 			property="og:image"
 			content="https://traveler20.site/asset/img/meta/ogp.webp"
 		/>
+        <?php wp_head(); ?>
 		<meta property="og:type" content="website" />
 		<meta name="twitter:card" content="large" />
 		<meta name="twitter:site" content="@traveler20site" />
 		<meta property="og:locale" content="ja_JP" />
 		<link rel="icon" type="image/x-icon" href="https://traveler20.site/asset/img/meta/favicon.ico" />
 		<link rel="stylesheet" href="./asset/css/style.css" />
-        <?php wp_head(); ?>
 	</head>
 	<body>
 		<div id="js-spinner" class="c-loading">

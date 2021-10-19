@@ -43,6 +43,7 @@
 		}
 	}
 	&__figcaption {
+		font-size: 1.6rem;
 		p + p {
 			margin-top: 16px;
 		}
@@ -51,7 +52,6 @@
 	@include s.breakpoint(tablet) {
 		&__figure {
 			flex-direction: row;
-			flex-wrap: wrap;
 			justify-content: space-between;
 
 			> img {
