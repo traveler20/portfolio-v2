@@ -13,8 +13,8 @@
 			min-width: 300px;
 			aspect-ratio: 1/1;
 			object-fit: cover;
-			animation: fluidrotate 24s ease 0s infinite;
-			@keyframes fluidrotate {
+			animation: p-profile-img 24s ease 0s infinite;
+			@keyframes p-profile-img {
 				0%,
 				100% {
 					border-radius: 63% 37% 54% 46%/55% 48% 52% 45%;

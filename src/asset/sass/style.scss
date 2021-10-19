@@ -8,7 +8,6 @@
 /*--------------------------------------*
  * layout
  *--------------------------------------*/
-@use "./layout/main";
 @use "./layout/header";
 @use "./layout/footer";
 
@@ -39,4 +38,3 @@
  * object
  -------------------*/
 @use "./object/utility/display";
-@use "./object/utility/typography";

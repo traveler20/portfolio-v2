@@ -59,7 +59,6 @@ $header-height: 80px;
 		z-index: 1;
 		position: fixed;
 		top: $header-height;
-		// top: -100%;
 		left: 0;
 		left: 100%;
 		width: 100%;
@@ -106,12 +105,10 @@ $header-height: 80px;
 		& > span:after {
 			display: block;
 			position: absolute;
-			/* 線の太さ */
 			height: 4px;
-			/* 線の長さ */
 			width: 25px;
 			background-color: #eee;
-			border-radius: 3px;
+			border-radius: 1px;
 			content: "";
 			cursor: pointer;
 			transition: s.$transition400ms;
@@ -163,7 +160,6 @@ $header-height: 80px;
 	}
 
 	@include s.breakpoint(tablet) {
-		/* menu */
 		&__nav {
 			flex-direction: row-reverse;
 		}

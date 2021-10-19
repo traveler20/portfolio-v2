@@ -80,7 +80,6 @@ function showElementAnimation() {
 		}
 	}
 }
-/* 関数showElementAnimationを実行 */
 showElementAnimation();
 window.addEventListener("scroll", showElementAnimation);
 

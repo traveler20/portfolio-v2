@@ -9,35 +9,20 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		font-size: 2rem;
+		font-size: 1.8rem;
 		margin-bottom: 18px;
-		&::before,
-		&::after {
-			content: "";
-			width: 2px;
-			height: 32px;
-			background-color: s.$c-body;
-		}
-		&::before {
-			margin-right: 30px;
-			transform: rotate(-35deg);
-		}
-		&::after {
-			margin-left: 30px;
-			transform: rotate(35deg);
-		}
 	}
 
 	a {
 		display: inline-block;
-		font-size: 2.4rem;
+		font-size: 2rem;
 		font-weight: bold;
 		padding: 3px 56px;
 		color: s.$c-base;
 		background-color: s.$c-body;
 		border: solid 1px s.$c-body;
 		border-radius: 50px;
-		width: clamp(270px, 90%, 400px);
+		width: clamp(270px, 80%, 400px);
 
 		position: relative;
 		&::before {

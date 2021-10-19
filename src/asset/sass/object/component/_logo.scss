@@ -11,8 +11,8 @@
 		stroke: s.$c-accent;
 		stroke-linejoin: round;
 		stroke-width: 18px;
-		animation: logoicon 5s linear infinite alternate;
-		@keyframes logoicon {
+		animation: c-logoicon 5s linear infinite alternate;
+		@keyframes c-logoicon {
 			0% {
 				stroke: s.$c-accent;
 			}

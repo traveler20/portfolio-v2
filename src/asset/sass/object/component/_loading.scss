@@ -9,10 +9,13 @@
 	width: 100vw;
 	height: 100vh;
 	z-index: 9999;
-	-webkit-transition: all 1.2s ease; /* 1.2秒でフェードアウト */
+	/* 1.2秒でフェードアウト */
+	-webkit-transition: all 1.2s ease;
 	transition: all 1.2s ease;
-	color: s.$c-accent; /* ローディングアニメーションカラー */
-	background-color: s.$c-base; /* 背景カラー */
+	/* ローディングアニメーションカラー */
+	color: s.$c-accent;
+	/* 背景カラー */
+	background-color: s.$c-base;
 }
 .c-loading.loaded {
 	opacity: 0;
@@ -33,7 +36,7 @@
 	border-width: 6px;
 	border-style: solid;
 	border-color: s.$c-accent transparent transparent;
-	animation: spinner-clock 1.8s infinite linear forwards reverse;
+	animation: c-loading-spinner 1.8s infinite linear forwards reverse;
 
 	&::before,
 	&::after {
@@ -49,14 +52,14 @@
 		transform-origin: right bottom;
 		border-right: 1px solid;
 		z-index: 1;
-		animation: spinner-hands 0.4s infinite linear forwards;
+		animation: c-loading-hands 0.4s infinite linear forwards;
 	}
 
 	&::after {
 		transform-origin: calc(100% - 2px) bottom;
 		border-right: 4px solid;
 		z-index: 2;
-		animation: spinner-hands-short 1.5s infinite linear forwards;
+		animation: c-loading-hands-short 1.5s infinite linear forwards;
 	}
 
 	// Loading text
@@ -68,12 +71,12 @@
 		font-size: 16px;
 
 		z-index: 3;
-		animation: loading_text 1.8s infinite linear forwards;
+		animation: c-loading-text 1.8s infinite linear forwards;
 	}
 }
 
 // Spinner animation
-@keyframes spinner-clock {
+@keyframes c-loading-spinner {
 	0% {
 		transform: translate(-50%, -50%) rotate(0);
 	}
@@ -82,7 +85,7 @@
 	}
 }
 
-@keyframes spinner-hands {
+@keyframes c-loading-hands {
 	0% {
 		transform: rotate(0deg);
 	}
@@ -91,7 +94,7 @@
 	}
 }
 
-@keyframes spinner-hands-short {
+@keyframes c-loading-hands-short {
 	0% {
 		transform: translateX(2px) translateZ(0) rotate(0deg);
 	}
@@ -100,7 +103,7 @@
 	}
 }
 
-@keyframes loading_text {
+@keyframes c-loading-text {
 	0% {
 		opacity: 1;
 		transform: translate(-50%, -50%) rotate(0deg);

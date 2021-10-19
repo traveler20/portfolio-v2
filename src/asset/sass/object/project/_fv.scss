@@ -23,7 +23,7 @@
 			width: 20px;
 			height: 20px;
 			background: rgba(255, 255, 255, 0.2);
-			animation: animate 25s linear infinite;
+			animation: p-fv-circles 25s linear infinite;
 			bottom: -150px;
 			&:nth-child(1) {
 				left: 25%;
@@ -91,7 +91,7 @@
 				animation-duration: 11s;
 			}
 		}
-		@keyframes animate {
+		@keyframes p-fv-circles {
 			0% {
 				transform: translateY(0) rotate(0deg);
 				opacity: 1;
@@ -119,8 +119,8 @@
 			s.$c-base,
 			rgba($color: s.$c-base, $alpha: 0.8)
 		);
-		animation: visual 20s linear infinite;
-		@keyframes visual {
+		animation: p-fv-visual 20s linear infinite;
+		@keyframes p-fv-visual {
 			0% {
 				background-position: 0 0;
 			}
@@ -152,9 +152,9 @@
 			height: calc(100% + 4px);
 			background-size: 400%;
 			z-index: -1;
-			animation: shadow 20s linear infinite;
+			animation: p-fv-visual-border 20s linear infinite;
 		}
-		@keyframes shadow {
+		@keyframes p-fv-visual-border {
 			0% {
 				background-position: 0 0;
 			}
@@ -177,8 +177,7 @@
 		line-height: normal;
 		text-align: left;
 		span {
-			background: s.$c-accent url("./../img/fire.jpg");
-			background: s.$c-accent url("./../img/fv-title-bg.png");
+			background: s.$c-accent url("./../img/fv-title-bg.webp");
 			background-position: bottom;
 			background-clip: text;
 			-webkit-background-clip: text;
@@ -187,8 +186,8 @@
 			width: calc(100% + 4px);
 			height: calc(100% + 4px);
 			background-size: 400%;
-			animation: fvtitle 36s linear infinite;
-			@keyframes fvtitle {
+			animation: p-fv-title 36s linear infinite;
+			@keyframes p-fv-title {
 				0% {
 					background-position: 0 0;
 				}
@@ -221,7 +220,6 @@
 		line-height: 1;
 		display: inline-block;
 		font-size: 1.8rem;
-		// padding: 10px 10px 90px;
 		padding: 10px 10px 38px;
 		text-decoration: none;
 		letter-spacing: 3px;
@@ -241,13 +239,13 @@
 			left: 10%;
 			height: 100px;
 			content: "";
-			animation: scrollAnime 1.5s cubic-bezier(1, 0, 0, 1) infinite;
+			animation: p-fv-scroll 1.5s cubic-bezier(1, 0, 0, 1) infinite;
 			background: s.$c-body;
 		}
 		&:hover {
 			text-decoration: none;
 		}
-		@keyframes scrollAnime {
+		@keyframes p-fv-scroll {
 			0% {
 				transform: scale(1, 0);
 				transform-origin: 0 0;

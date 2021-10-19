@@ -14,12 +14,6 @@ $c-accent-right: rgba(
 	$alpha: 0.3,
 );
 
-$box-shadow: 3px 3px 3px
-	rgba(
-		$color: $c-base,
-		$alpha: 0.25,
-	);
-
 $c-gray-right: #e9e9e9;
 $c-gray-dark: #9da5a0;
 
@@ -27,23 +21,6 @@ $transition400ms: all 0.4s;
 
 // responsive system
 // ---------------------
-@mixin oswald($weight: 400) {
-	font-family: "Oswald", sans-serif;
-	font-weight: $weight;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
-@mixin notosans($weight: 700) {
-	font-family: "Noto Sans", sans-serif;
-	font-weight: $weight;
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
-@mixin inter($weight: bold) {
-	font-family: Inter;
-	font-weight: $weight;
-}
-
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@800&display=swap");
 @mixin railway($weight: bold) {
 	font-family: "Raleway", sans-serif;
