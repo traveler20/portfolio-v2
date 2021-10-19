@@ -7,8 +7,10 @@
 		justify-content: center;
 		align-items: center;
 		gap: 36px;
-
-		> img {
+	}
+	&__image {
+		source,
+		img {
 			width: 100%;
 			min-width: 300px;
 			aspect-ratio: 1/1;
