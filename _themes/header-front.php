@@ -4,30 +4,11 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>traveler20</title>
 		<meta name="author" content="traveler20" />
 		<link rel="canonical" href="https://traveler20.site/" />
-		<meta
-			property="og:title"
-			content="traveler20｜WEB Designer. WEB Developer."
-		/>
-		<meta
-			property="og:site_name"
-			content="traveler20｜WEB Designer. WEB Developer."
-		/>
-		<meta name="description" content="traveler20のホームページ。" />
-		<meta property="og:description" content="traveler20のホームページ。" />
-		<meta property="og:url" content="https://traveler20.site/" />
-		<meta
-			property="og:image"
-			content="https://traveler20.site/asset/img/meta/ogp.webp"
-		/>
+		<!-- php WordPress wp_head -->
         <?php wp_head(); ?>
-		<meta property="og:type" content="website" />
-		<meta name="twitter:card" content="large" />
-		<meta name="twitter:site" content="@traveler20site" />
-		<meta property="og:locale" content="ja_JP" />
-		<link rel="icon" type="image/x-icon" href="https://traveler20.site/asset/img/meta/favicon.ico" />
+		<!-- /php WordPress wp_head -->
 		<link rel="stylesheet" href="./asset/css/style.css" />
 	</head>
 	<body>

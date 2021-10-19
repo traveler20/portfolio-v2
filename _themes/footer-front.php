@@ -86,6 +86,8 @@
 		<!-- /.l-footer -->
 
 		<script src="./asset/js/script.js"></script>
+		<!-- php WordPress wp_footer -->
         <?php wp_footer(); ?>
+		<!-- /php WordPress wp_footer -->
 	</body>
 </html>
