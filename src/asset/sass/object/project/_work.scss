@@ -7,25 +7,33 @@
 		width: 100%;
 		overflow: hidden;
 	}
+	&__slider {
+		display: flex;
+		gap: 20px;
+		&:nth-of-type(odd) {
+			.p-work__lists {
+				animation-direction: reverse;
+			}
+		}
+	}
 	&__lists {
 		display: flex;
 		gap: 20px;
 		margin: 0 0 80px;
-		min-width: 100%;
-		width: min-content;
-		animation: sliderAnimation 20s linear infinite;
-		&:nth-of-type(odd) {
-			animation-direction: reverse;
-		}
+		animation: sliderAnimation 30s infinite linear 0.5s both;
+
 		@keyframes sliderAnimation {
+			0% {
+				transform: translateX(0%);
+			}
 			100% {
-				transform: translateX(-50%);
+				transform: translateX(-100%);
 			}
 		}
 
 		> li {
-			// width: clamp(160px, 100%, 400px);
 			width: 160px;
+			// width: calc(100vw / 6);
 		}
 	}
 

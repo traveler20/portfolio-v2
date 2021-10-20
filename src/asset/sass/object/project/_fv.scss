@@ -165,10 +165,6 @@
 				background-position: 0 0;
 			}
 		}
-
-		// &:after {
-		// 	filter: blur(20px);
-		// }
 	}
 
 	&__title {
@@ -185,11 +181,12 @@
 			color: transparent;
 			width: calc(100% + 4px);
 			height: calc(100% + 4px);
-			background-size: 400%;
-			animation: p-fv-title 36s linear infinite;
+			background-size: 400% cover;
+			transition: 0.4s;
+			animation: p-fv-title 42s linear infinite;
 			@keyframes p-fv-title {
 				0% {
-					background-position: 0 0;
+					background-position: 0% 0;
 				}
 				100% {
 					background-position: 400% 0;
