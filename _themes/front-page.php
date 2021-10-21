@@ -258,11 +258,14 @@
 				<div class="c-section__inner">
 					<h2 class="c-section__title js-fadeIn" data-en="service">事業内容</h2>
 					<figure class="p-service__figure js-fadeIn">
-						<img
-							src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
-							alt=""
-							loading="lazy"
-						/>
+						<picture>
+							<source
+								srcset="./asset/img/service1.webp"
+								type="image/webp"
+								loading="lazy"
+							/>
+							<img src="./asset/img/service1.png" alt="" loading="lazy" />
+						</picture>
 						<figcaption class="p-service__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Web design">
 								<span>サイトデザイン・運用事業</span>
@@ -273,11 +276,14 @@
 						</figcaption>
 					</figure>
 					<figure class="p-service__figure js-fadeIn">
-						<img
-							src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
-							alt=""
-							loading="lazy"
-						/>
+						<picture>
+							<source
+								srcset="./asset/img/service2.webp"
+								type="image/webp"
+								loading="lazy"
+							/>
+							<img src="./asset/img/service2.png" alt="" loading="lazy" />
+						</picture>
 						<figcaption class="p-service__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Development">
 								<span>メディア運営・制作</span>
