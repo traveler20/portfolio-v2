@@ -48,6 +48,14 @@
 			margin-top: 16px;
 		}
 	}
+	&__icon {
+		display: flex;
+		gap: 12px;
+		margin-top: 18px;
+		li {
+			width: 30px;
+		}
+	}
 
 	@include s.breakpoint(tablet) {
 		&__figure {
