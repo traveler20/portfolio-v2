@@ -305,11 +305,8 @@
 					</h2>
 					<figure class="p-profile__figure">
 						<picture class="p-profile__image">
-							<!-- <source srcset="./asset/img/sample.webp" type="image/webp" /> -->
-							<img
-								src="https://traveler20.site/portfolio/asset/img/businesscard-profile.png"
-								alt=""
-							/>
+							<source srcset="./asset/img/profile.webp" type="image/webp" />
+							<img src="./asset/img/profile.jpg" alt="" />
 						</picture>
 						<figcaption class="p-profile__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Greeting">
@@ -322,10 +319,18 @@
 							<p>
 								ただLPやホームページをつくっておわりではなく、WEBサイトを継続的に運用しながら目的を達成するよう寄り添って考えることができますので、お気軽にご相談いただければと思います。
 							</p>
-							<ul>
-								<li><a href="https://www.facebook.com/O.traveler20/"></a></li>
-								<li><a href="https://www.wantedly.com/id/traveler20"></a></li>
-								<!-- <li><a href="">Portfolio</a></li> -->
+							<ul class="p-profile__icon">
+								<li>
+									<a href="https://www.facebook.com/O.traveler20/"
+										><span class="icon-facebook"></span
+									></a>
+								</li>
+								<li>
+									<a href="https://twitter.com/traveler20site"
+										><span class="icon-twitter"></span
+									></a>
+								</li>
+								<!-- <li><a href="/portfolio/">Portfolio</a></li> -->
 							</ul>
 						</figcaption>
 					</figure>

@@ -13,8 +13,10 @@
 		img {
 			width: 100%;
 			min-width: 300px;
+			max-width: 500px;
 			aspect-ratio: 1/1;
 			object-fit: cover;
+			filter: saturate(3%);
 			animation: p-profile-img 24s ease 0s infinite;
 			@keyframes p-profile-img {
 				0%,
@@ -52,8 +54,18 @@
 		display: flex;
 		gap: 12px;
 		margin-top: 18px;
-		li {
-			width: 30px;
+		a {
+			span {
+				font-size: 28px;
+			}
+			&:hover {
+				text-decoration: none;
+				.icon-twitter:before,
+				.icon-facebook:before {
+					transition: 0.4s;
+					color: s.$c-body;
+				}
+			}
 		}
 	}
 
