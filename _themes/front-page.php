@@ -321,12 +321,26 @@
 							</p>
 							<ul class="p-profile__icon">
 								<li>
-									<a href="https://www.facebook.com/O.traveler20/"
+									<a
+										href="https://www.facebook.com/O.traveler20/"
+										target="_blank"
+										rel="noopener noreferrer"
 										><span class="icon-facebook"></span
 									></a>
 								</li>
 								<li>
-									<a href="https://twitter.com/traveler20site"
+									<a
+										href="https://www.instagram.com/traveler20site/"
+										target="_blank"
+										rel="noopener noreferrer"
+										><span class="icon-instagram"></span
+									></a>
+								</li>
+								<li>
+									<a
+										href="https://twitter.com/traveler20site"
+										target="_blank"
+										rel="noopener noreferrer"
 										><span class="icon-twitter"></span
 									></a>
 								</li>
