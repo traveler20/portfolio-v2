@@ -61,42 +61,42 @@
 							<ul class="p-work__lists">
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-plant.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_lp-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_topic-tonomine.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_topic-tonomine.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_ec-pineapple.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_ec-pineapple.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_portfolio.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_portfolio.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/design_hp-beauty.webp"
 										alt=""
 										loading="lazy"
 									/>
@@ -105,42 +105,42 @@
 							<ul class="p-work__lists">
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_lp-plant.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-plant.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_lp-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_topic-tonomine.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_topic-tonomine.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_ec-pineapple.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_ec-pineapple.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/cording_portfolio.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/cording_portfolio.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/design_hp-beauty.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/design_hp-beauty.webp"
 										alt=""
 										loading="lazy"
 									/>
@@ -154,42 +154,42 @@
 							<ul class="p-work__lists">
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_ico-flaticon.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_ico-flaticon.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_bnr-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_thumb-01.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_thumb-01.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/others_app-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/others_app-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_bnr-zenicapp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-zenicapp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_logo-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_logo-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
@@ -198,42 +198,42 @@
 							<ul class="p-work__lists">
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_ico-flaticon.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_ico-flaticon.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_bnr-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_thumb-01.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_thumb-01.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/others_app-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/others_app-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_bnr-zenicapp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-zenicapp.webp"
 										alt=""
 										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/works/psai_logo-kokopp.webp"
+										src="https://traveler20.site/portfolio/asset/img/work/psai_logo-kokopp.webp"
 										alt=""
 										loading="lazy"
 									/>
