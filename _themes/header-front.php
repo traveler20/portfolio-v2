@@ -13,11 +13,8 @@
 	</head>
 	<body>
 		<div id="js-spinner" class="c-loading">
-			<div class="c-loading__spinner">
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+			<div class="c-loading__text">LOADING</div>
+			<div class="c-loading__spinner"></div>
 		</div>
 
 		<div class="js-cursor c-cursor">
