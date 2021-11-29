@@ -6,7 +6,7 @@
 	height: 90vh;
 	// position: sticky;
 	// top: -82px;
-	margin-bottom: -96px;
+	margin-bottom: -120px;
 
 	&__circles {
 		position: absolute;
@@ -263,6 +263,7 @@
 	}
 
 	@include s.breakpoint(tablet) {
+		margin-bottom: -96px;
 		.c-inner {
 			display: grid;
 			justify-content: space-evenly;
