@@ -1,0 +1,43 @@
+/* -------------------------------------------
+/ 『入力ボックス』
+------------------------------------------- */
+.search-edit,
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+select {
+	background-color: #ccc;
+}
+
+/* -------------------------------------------
+/ 『インデックスカードタイプ』
+------------------------------------------- */
+.ect-vertical-card.ect-tile-card .a-wrap {
+	margin: 0 0.55% 12px;
+}
+
+.ect-vertical-card.ect-tile-card .card-snippet {
+	margin: 0;
+}
+
+.ect-vertical-card.ect-tile-card.ect-2-columns .entry-card-wrap {
+	width: 48.5%;
+	display: inline-block;
+	margin-bottom: 12px;
+}
+
+.ect-3-columns .entry-card-wrap {
+	width: 32%;
+}
+
+.ect-vertical-card-3 .entry-card-wrap {
+	width: 32%;
+}

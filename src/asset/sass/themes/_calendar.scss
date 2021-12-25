@@ -1,0 +1,25 @@
+/* -------------------------------------------
+/ 『カレンダー』
+------------------------------------------- */
+#wp-calendar #today,
+#slide-in-wp-calendar #slide-in-today {
+	background-color: #a4701a;
+}
+
+#wp-calendar #today a,
+#slide-in-wp-calendar #slide-in-today a {
+	background-color: #cba350;
+	color: black;
+}
+
+#wp-calendar td a,
+#slide-in-wp-calendar td a {
+	display: block;
+	background-color: rgba(231, 30, 15, 0.4);
+	color: #ccc;
+}
+
+#wp-calendar td a:hover,
+#slide-in-wp-calendar td a:hover {
+	background-color: rgba(231, 30, 15, 0.6);
+}

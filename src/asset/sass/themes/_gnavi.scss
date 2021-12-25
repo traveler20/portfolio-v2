@@ -1,0 +1,43 @@
+/* -------------------------------------------
+/ 『グローバルメニュー』
+------------------------------------------- */
+#navi .navi-in > .menu-header .sub-menu {
+	background-color: #222222;
+}
+
+.header-container {
+	box-shadow: 0 6px 5px -3px rgba(0, 0, 0, 0.24),
+		0 6px 10px -3px rgba(0, 0, 0, 0.18);
+}
+
+.header-container .navi {
+	background-color: #222222;
+}
+
+.header-container.fixed-header {
+	background-color: #222222;
+}
+
+#navi .navi-in a {
+	color: #f6f6f6;
+	transition: 0.3s;
+}
+
+#navi .navi-in a:hover {
+	background-color: #60caad;
+}
+
+/* -------------------------------------------
+/ 通知
+------------------------------------------- */
+.nt-notice {
+	background-color: #007b43;
+}
+
+.nt-warning {
+	background-color: #c89932;
+}
+
+.nt-danger {
+	background-color: #a22041;
+}

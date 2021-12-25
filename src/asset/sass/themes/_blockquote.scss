@@ -1,0 +1,44 @@
+/* -------------------------------------------
+/ 『引用』
+------------------------------------------- */
+blockquote {
+	padding: 10px 10px 10px 46px;
+	box-sizing: border-box;
+	font-style: italic;
+	background: #e0e0e0;
+	border-radius: 4px;
+	background-color: #bbbbbb;
+	border: 0;
+	box-shadow: 0px 0px 0 2px #333;
+	border: 2px solid #202020;
+}
+
+blockquote:before {
+	display: inline-block;
+	top: 5px;
+	left: 4px;
+	content: "\f10d";
+	font-family: FontAwesome;
+	color: #e0e0e0;
+	font-size: 24px;
+	line-height: 1;
+	z-index: 2;
+	font-weight: 400;
+	color: rgba(231, 30, 15, 0.7);
+}
+
+blockquote:after {
+	content: "";
+	left: 0;
+	top: 0;
+	border-width: 0 0 60px 60px;
+	border-style: solid;
+	border-color: transparent #333333;
+	bottom: auto;
+}
+
+blockquote p {
+	margin: 14px 0;
+	z-index: 3;
+	color: #540b05;
+}

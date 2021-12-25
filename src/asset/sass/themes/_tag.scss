@@ -1,0 +1,19 @@
+/* -------------------------------------------
+/ 『クラウドタグ／パンくずリスト』
+------------------------------------------- */
+.tagcloud a {
+	border: 1px solid #aaaaaa;
+	color: #ccc;
+}
+
+.tagcloud a:hover {
+	color: #333;
+}
+
+.tagcloud a .tag-caption:hover {
+	color: #333;
+}
+
+.breadcrumb a {
+	color: #f0f0f0;
+}

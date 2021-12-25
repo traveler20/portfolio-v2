@@ -1,0 +1,96 @@
+/* -------------------------------------------
+/ 『エントリーカード』
+------------------------------------------- */
+.a-wrap {
+	background-color: #333333;
+	color: #f0f0f0;
+}
+
+/* 奇数番目のカード */
+.entry-card-wrap.a-wrap:nth-child(odd) {
+	position: relative;
+	z-index: 0;
+}
+
+.entry-card-wrap.a-wrap:nth-child(odd):before {
+	content: "";
+	color: #f0f0f0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	transition: 0.4s;
+	background-image: linear-gradient(
+		135deg,
+		#1d1b1b,
+		#1d1b1b 70%,
+		#032c2f 70%,
+		#032c2f 100%,
+		transparent 0
+	);
+	border: 2px outset #332f2f;
+}
+
+.entry-card-wrap.a-wrap:nth-child(odd):after {
+	content: "";
+	color: #f0f0f0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -2;
+	top: 0;
+	left: 0;
+	background-color: rgba(231, 30, 15, 0.08);
+	border: 2px outset #aaaaaa;
+}
+
+/* 偶数番目のカード */
+.entry-card-wrap.a-wrap:nth-child(even) {
+	position: relative;
+	z-index: 0;
+}
+
+.entry-card-wrap.a-wrap:nth-child(even):before {
+	content: "";
+	color: #f0f0f0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	transition: 0.4s;
+	background-image: linear-gradient(
+		45deg,
+		#032c2f,
+		#032c2f 50%,
+		#1d1b1b 50%,
+		#1d1b1b 100%,
+		transparent 0
+	);
+	border: 2px outset #332f2f;
+}
+
+.entry-card-wrap.a-wrap:nth-child(even):after {
+	content: "";
+	color: #f0f0f0;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	z-index: -2;
+	top: 0;
+	left: 0;
+	background-color: rgba(231, 30, 15, 0.08);
+	border: 2px outset #aaaaaa;
+}
+
+.entry-card-wrap.a-wrap:hover:before {
+	opacity: 0;
+}
+
+.a-wrap:hover {
+	background: none;
+	color: #f0f0f0;
+}

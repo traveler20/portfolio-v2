@@ -1,0 +1,35 @@
+/* -------------------------------------------
+/ 『全体の文字色／背景色』
+------------------------------------------- */
+.site-name-text-link {
+	color: #f0f0f0;
+}
+
+body {
+	background-color: #333333;
+	color: #f0f0f0;
+}
+
+.no-scrollable-sidebar .sidebar {
+	height: 100%;
+}
+
+.no-scrollable-main .main {
+	height: 100%;
+	color: #f0f0f0;
+}
+
+.header-container,
+.main,
+.sidebar,
+.footer {
+	background-color: #333333;
+}
+
+/* -------------------------------------------
+/ 『文字色』
+------------------------------------------- */
+.tagline,
+.rating-number {
+	color: #f0f0f0;
+}

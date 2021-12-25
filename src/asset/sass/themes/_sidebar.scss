@@ -1,0 +1,41 @@
+/* -------------------------------------------
+/
+------------------------------------------- */
+#sidebar-menu-input:checked ~ #sidebar-menu-content,
+#search-menu-input:checked ~ #search-menu-content,
+#share-menu-input:checked ~ #share-menu-content,
+#follow-menu-input:checked ~ #follow-menu-content {
+	background-color: #333333;
+}
+
+.mobile-menu-buttons .menu-button > a {
+	color: #f0f0f0;
+}
+
+.mobile-menu-buttons .menu-button:hover {
+	background-color: #333333;
+	color: #f0f0f0;
+}
+
+.mobile-menu-buttons {
+	background-color: #333333;
+}
+
+#navi-menu-input:checked ~ #navi-menu-content {
+	background-color: #333333;
+}
+
+.menu-drawer a {
+	color: #f0f0f0;
+	border-bottom: 1px solid #050505;
+	box-shadow: 0 2px 0 #333;
+}
+
+.menu-drawer a:hover {
+	color: #f0f0f0;
+	background-color: rgba(231, 30, 15, 0.6);
+}
+
+.mobile-menu-buttons .menu-icon {
+	color: #f0f0f0;
+}
