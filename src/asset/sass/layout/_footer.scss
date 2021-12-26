@@ -3,14 +3,17 @@
 @use "./../foundation/system" as s;
 
 .l-footer {
+	font-size: 1.4rem;
 	background: #000;
 
 	.c-inner {
-		display: flex;
-		flex-wrap: wrap;
-		align-items: center;
-		justify-content: space-between;
 		padding: 32px 20px 40px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: space-evenly;
+		align-items: flex-start;
+		gap: 16px;
 	}
 	a {
 		color: s.$c-body;
@@ -25,33 +28,28 @@
 		}
 	}
 
-	&__lists {
-		li {
-			display: none;
-		}
-		li:last-of-type {
-			display: block;
-		}
+	&__nav {
 	}
-
-	&__rights {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		gap: 10px;
+	&__subtitle {
+		font-size: 1.6rem;
+		font-weight: bold;
+		margin-bottom: 8px;
+	}
+	&__lists {
+		li + li {
+			margin-top: 6px;
+		}
+		a {
+			color: s.$c-body;
+		}
 	}
 
 	@include s.breakpoint(tablet) {
-		&__lists {
-			display: flex;
-			align-items: center;
-			justify-content: space-between;
-			gap: 14px;
-			text-transform: uppercase;
-			padding: 20px 0;
-			li {
-				display: inline-block;
-			}
+		.c-inner {
+			flex-direction: row;
+		}
+		&__copy {
+			margin: auto 0 0;
 		}
 	}
 	@include s.breakpoint(pc) {

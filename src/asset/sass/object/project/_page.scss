@@ -1,0 +1,98 @@
+/* p-page
+--------------------------- */
+@use "./../../foundation/system" as s;
+
+.p-page {
+	&__fv {
+		&Title {
+			@include s.railway($weight: 900);
+			@include s.font-size(54);
+			line-height: normal;
+			text-align: left;
+			span {
+				transition: 0.4s;
+				// animation
+				display: block;
+				opacity: 0;
+				transform: matrix(1, 0, 0, 1, 0, 100);
+				transition: 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+				&.is-show {
+					opacity: 1;
+					transform: matrix(1, 0, 0, 1, 0, 0);
+				}
+			}
+		}
+		&TitleEn {
+			color: s.$c-accent;
+			font-size: 7.2rem;
+		}
+		&TitleJa {
+			font-size: 2.8rem;
+		}
+
+		.c-inner {
+			padding-top: 40px;
+			padding-bottom: 50px;
+		}
+
+		@include s.breakpoint(tablet) {
+			&Title {
+				font-size: 10rem;
+				justify-self: center;
+			}
+			&TitleEn {
+				font-size: 10rem;
+			}
+		}
+		@include s.breakpoint(pc) {
+			&Title {
+				@include s.font-size(32);
+			}
+		}
+	}
+
+	&__content {
+		@include s.breakpoint(tablet) {
+			&.c-section {
+				clip-path: polygon(0% 0%, 100% 12%, 100% 100%, 0% 100%);
+			}
+		}
+		@include s.breakpoint(pc) {
+		}
+	}
+
+	// p-page--single
+	&--single {
+		@extend .p-page;
+
+		&__fv {
+			margin-top: -80px;
+			height: 20vh;
+			background-image: url("./../img/fv-title-bg.webp");
+			// background-position: center;
+			background-size: cover;
+			background-repeat: no-repeat;
+
+			@include s.breakpoint(tablet) {
+				height: 30vh;
+			}
+			@include s.breakpoint(pc) {
+			}
+		}
+
+		&__content {
+			@include s.breakpoint(tablet) {
+				&.c-section {
+					clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+				}
+			}
+			@include s.breakpoint(pc) {
+			}
+		}
+	}
+
+	// p-page--archive
+	&--archive {
+		@extend .p-page;
+	}
+}
