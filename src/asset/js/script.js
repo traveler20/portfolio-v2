@@ -13,7 +13,7 @@ window.onload = function () {
 		function onload_fv2() {
 			const fvTitle2 = document.getElementById("js-fvTitle2");
 			fvTitle2.classList.add("is-show");
-			// js-headerIn 0.5秒後に実行
+			// js-headerIn .is-show 0.5秒後に実行
 			window.setTimeout(onload_fv3, 500);
 			function onload_fv3() {
 				const headerIn = document.getElementById("js-headerIn");
@@ -28,6 +28,37 @@ window.onload = function () {
 		}
 	}
 };
+
+// #js-headerIn .is-headerIn
+(function () {
+	const target = document.getElementById("js-headerIn"),
+		height = 60;
+	let offset = 0,
+		lastPosition = 0,
+		ticking = false;
+
+	function onScroll() {
+		if (lastPosition > height) {
+			if (lastPosition > offset) {
+				target.classList.add("is-headIn");
+			} else {
+				target.classList.remove("is-headIn");
+			}
+			offset = lastPosition;
+		}
+	}
+
+	window.addEventListener("scroll", function (e) {
+		lastPosition = window.scrollY;
+		if (!ticking) {
+			window.requestAnimationFrame(function () {
+				onScroll(lastPosition);
+				ticking = false;
+			});
+			ticking = true;
+		}
+	});
+})();
 
 // #js-navToggle js-navLists
 const toggle = document.getElementsByClassName("js-navToggle")[0];
