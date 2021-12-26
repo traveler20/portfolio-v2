@@ -262,11 +262,11 @@
 					<figure class="p-service__figure js-fadeIn">
 						<picture>
 							<source
-								srcset="./asset/img/service1.webp"
+								srcset="<? get_template_directory_uri(); ?>/wp/asset/img/service1.webp"
 								type="image/webp"
 								loading="lazy"
 							/>
-							<img src="./asset/img/service1.png" alt="" loading="lazy" />
+							<img src="<? get_template_directory_uri(); ?>/wp/asset/img/service1.png" alt="" loading="lazy" />
 						</picture>
 						<figcaption class="p-service__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Web design">
@@ -280,11 +280,11 @@
 					<figure class="p-service__figure js-fadeIn">
 						<picture>
 							<source
-								srcset="./asset/img/service2.webp"
+								srcset="<? get_template_directory_uri(); ?>/wp/asset/img/service2.webp"
 								type="image/webp"
 								loading="lazy"
 							/>
-							<img src="./asset/img/service2.png" alt="" loading="lazy" />
+							<img src="<? get_template_directory_uri(); ?>/wp/asset/img/service2.png" alt="" loading="lazy" />
 						</picture>
 						<figcaption class="p-service__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Development">
@@ -307,8 +307,8 @@
 					</h2>
 					<figure class="p-profile__figure">
 						<picture class="p-profile__image">
-							<source srcset="./asset/img/profile.webp" type="image/webp" />
-							<img src="./asset/img/profile.jpg" alt="" />
+							<source srcset="<? get_template_directory_uri(); ?>/wp/asset/img/profile.webp" type="image/webp" />
+							<img src="<? get_template_directory_uri(); ?>/wp/asset/img/profile.jpg" alt="" />
 						</picture>
 						<figcaption class="p-profile__figcaption">
 							<h3 class="c-section__subtitle js-fadeIn" data-en="Greeting">

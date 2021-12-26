@@ -9,7 +9,6 @@
 		<!-- php WordPress wp_head -->
         <?php wp_head(); ?>
 		<!-- /php WordPress wp_head -->
-		<link rel="stylesheet" href="./wp-content/themes/traveler20/asset/css/style.css" />
 	</head>
 	<body>
 		<div id="js-spinner" class="c-loading">

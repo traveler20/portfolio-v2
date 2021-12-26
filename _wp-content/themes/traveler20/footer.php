@@ -85,7 +85,6 @@
 		</footer>
 		<!-- /.l-footer -->
 
-		<script src="./wp-content/themes/traveler20/asset/js/script.js"></script>
 		<!-- php WordPress wp_footer -->
         <?php wp_footer(); ?>
 		<!-- /php WordPress wp_footer -->
