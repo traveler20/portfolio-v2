@@ -5,3 +5,6 @@
  * @link: https://github.com/traveler20/traveler20
  */
 ?>
+
+<?php //本文テンプレート
+get_template_part('tmp/content') ?>
