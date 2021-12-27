@@ -5,6 +5,7 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="traveler20" />
+		<title><?php echo bloginfo('name'); ?></title>
 		<link rel="canonical" href="https://traveler20.site/" />
 		<!-- php WordPress wp_head -->
         <?php wp_head(); ?>
@@ -23,7 +24,7 @@
 		<!-- .l-header -->
 		<header class="l-header" id="js-headerIn">
 			<div class="c-inner">
-				<a class="l-header__logo" href="/">
+				<a class="l-header__logo" href="<?php echo esc_url(home_url()); ?>">
 					<svg class="c-logo" viewBox="0 0 2485.06 415.58">
 						<path
 							class="c-logo__text"

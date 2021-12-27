@@ -78,7 +78,7 @@
 				<ul class="l-footer__rights">
 					<!-- <li><a href="/policy">privacy policy</a></li> -->
 					<li>
-						<small>&copy;&nbsp;2020 traveler20.</small>
+						<small>&copy;&nbsp;2020 <?php echo bloginfo('name'); ?>.</small>
 					</li>
 				</ul>
 			</div>
