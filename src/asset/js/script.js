@@ -119,7 +119,7 @@ if (window.matchMedia("(min-width: 640px)").matches) {
 	// js-cursor
 	document.addEventListener("DOMContentLoaded", function () {
 		const cursor = document.querySelector(".js-cursor");
-		const links = document.querySelectorAll("a");
+		const links = document.querySelectorAll("a,label,input");
 		const links2 = document.querySelectorAll(".js-service__hovering");
 
 		// cursorを追従させる機能

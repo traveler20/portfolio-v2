@@ -50,7 +50,7 @@ $header-height: 80px;
 		border-radius: 50px;
 		&:hover {
 			color: s.$c-body;
-			background-color: s.$c-base-sub;
+			background-color: transparent;
 			text-decoration: none;
 		}
 	}
@@ -191,7 +191,7 @@ $header-height: 80px;
 			}
 			&:hover {
 				color: s.$c-body;
-				background-color: s.$c-base-sub;
+				background-color: transparent;
 				text-decoration: none;
 				&:before,
 				&:after {
