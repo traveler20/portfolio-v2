@@ -69,11 +69,11 @@
 					</svg>
 				</a>
 				<ul class="l-footer__lists">
-					<li><a href="#about">about</a></li>
-					<li><a href="#work">work</a></li>
-					<li><a href="#service">service</a></li>
-					<li><a href="#profile">profile</a></li>
-					<li><a href="#contact">contact</a></li>
+					<li><a href="<?php echo esc_url(home_url()); ?>/about">about</a></li>
+					<li><a href="<?php echo esc_url(home_url()); ?>/work">work</a></li>
+					<li><a href="<?php echo esc_url(home_url()); ?>/service">service</a></li>
+					<li><a href="<?php echo esc_url(home_url()); ?>/profile">profile</a></li>
+					<li><a href="<?php echo esc_url(home_url()); ?>/contact">contact</a></li>
 				</ul>
 				<ul class="l-footer__rights">
 					<!-- <li><a href="/policy">privacy policy</a></li> -->

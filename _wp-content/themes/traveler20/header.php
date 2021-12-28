@@ -5,7 +5,8 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="traveler20" />
-		<title><?php echo bloginfo('name'); ?></title>
+		<title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?></title>
+		<meta name="description" content="<?php bloginfo('description'); ?>" />
 		<link rel="canonical" href="https://traveler20.site/" />
 		<!-- php WordPress wp_head -->
         <?php wp_head(); ?>
@@ -92,7 +93,7 @@
 					</svg>
 				</a>
 				<nav class="l-header__nav">
-					<a href="#contact" class="l-header__navCta">Contact</a>
+					<a href="<?php echo esc_url(home_url()); ?>/contact" class="l-header__navCta">Contact</a>
 					<input
 						type="checkbox"
 						class="js-navToggle"
@@ -102,12 +103,13 @@
 						<span></span>
 					</label>
 					<label for="l-header__navToggle" class="l-header__navClose"></label>
-					<ul class="l-header__navLists js-navLists">
-						<li><a href="#about">about</a></li>
-						<li><a href="#work">work</a></li>
-						<li><a href="#service">service</a></li>
-						<li><a href="#profile">profile</a></li>
-					</ul>
+					<?php
+					$args = array(
+						'menu_class' => 'l-header__navLists js-navLists',
+						'container' => false,
+					);
+					wp_nav_menu($args);
+					?>
 				</nav>
 			</div>
 		</header>

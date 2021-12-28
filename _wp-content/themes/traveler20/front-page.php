@@ -361,7 +361,7 @@
 						お問い合わせ
 					</h2>
 					<div class="p-contact__content">
-						<?php echo do_shortcode('[contact-form-7 id="72" title="Contact form 1"]'); ?>
+						<?php echo do_shortcode('[contact-form-7 id="22" title="contact-form"]'); ?>
 					</div>
 				</div>
 			</section>
