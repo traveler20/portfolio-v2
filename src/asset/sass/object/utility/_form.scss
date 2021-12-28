@@ -1,0 +1,43 @@
+@use "./../../foundation/system" as s;
+
+.wpcf7-form-control {
+	width: 100%;
+	padding: 10px 10px;
+	border-radius: 4px;
+	color: s.$c-base;
+	background-color: s.$c-gray-right;
+	&:focus {
+		background-color: s.$c-body;
+	}
+}
+
+label {
+	display: block;
+	margin-bottom: 20px;
+}
+
+input[type="submit"] {
+	color: s.$c-base-sub;
+	text-align: center;
+	font-size: 24px;
+	font-weight: bold;
+	background-color: s.$c-body;
+	border: solid 1px s.$c-body;
+	border-radius: 8px;
+	&:hover {
+		color: s.$c-body;
+		background-color: s.$c-base-sub;
+	}
+}
+
+@include s.breakpoint(tablet) {
+	label {
+		display: block;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.wpcf7-form-control-wrap {
+		width: 70%;
+	}
+}
