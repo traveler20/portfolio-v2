@@ -63,6 +63,107 @@
 		}
 	}
 
+	&__cards {
+		// display: flex;
+		// flex-wrap: wrap;
+
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 300px);
+		/* grid-row-gap: 20px;
+				grid-column-gap: 20px; */
+		grid-gap: 20px 20px;
+
+		/* 左寄せ */
+		justify-content: center;
+
+		/* 中央寄せ */
+		width: 90%;
+		margin: 0 auto;
+	}
+	&__card {
+		// width: 30%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 8px;
+		border: solid 1px s.$c-body;
+		border-radius: 4px;
+
+		a {
+			color: s.$c-body;
+			&:hover {
+				text-decoration: none;
+				opacity: 0.8;
+			}
+		}
+
+		&__title {
+			font-weight: bold;
+			margin: 8px 0 4px;
+			padding: 0 8px;
+			display: -webkit-box;
+			overflow: hidden;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			min-height: 52px;
+		}
+		&__time {
+			font-size: 1.4rem;
+			padding: 0 8px;
+		}
+		&__category {
+			display: inline-block;
+			padding: 5px 10px;
+			margin: 0 8px 16px;
+			font-size: 1.4rem;
+			font-weight: bold;
+			color: s.$c-base;
+			background-color: s.$c-body;
+			border-radius: 4px;
+			a {
+				color: s.$c-base;
+			}
+		}
+
+		@include s.breakpoint(tablet) {
+		}
+		@include s.breakpoint(pc) {
+		}
+	}
+
+	// &__archives {
+	// }
+	// &__archive {
+	// 	display: flex;
+	// 	justify-content: flex-start;
+	// 	align-items: center;
+	// 	gap: 16px;
+
+	// 	&__imglink {
+	// 		width: 30%;
+	// 	}
+	// 	&__description {
+	// 		a {
+	// 			color: s.$c-body;
+	// 		}
+	// 		h3 {
+	// 			font-weight: bold;
+	// 		}
+	// 		span {
+	// 			display: inline-block;
+	// 			padding: 5px 10px;
+	// 			font-size: 1.4rem;
+	// 			font-weight: bold;
+	// 			color: s.$c-base;
+	// 			background-color: s.$c-body;
+	// 			border-radius: 4px;
+	// 			a {
+	// 				color: s.$c-base;
+	// 			}
+	// 		}
+	// 	}
+	// }
+
 	// p-page--single
 	&--single {
 		@extend .p-page;
@@ -103,5 +204,12 @@
 	// p-page--archive
 	&--archive {
 		@extend .p-page;
+
+		&__header {
+			margin-bottom: 40px;
+		}
+		&__title {
+			@extend .p-page--single__title;
+		}
 	}
 }

@@ -16,32 +16,28 @@
 			<!-- .p-page__content -->
 			<section class="p-page__content c-section" id="content">
 				<div class="c-section__inner">
+					<ul class="p-page__cards">
 					<!-- page.php -->
-					<?php
-						global $post;
-						$args = array( 'posts_per_page' => 8 );
-						$myposts = get_posts( $args );
-						foreach( $myposts as $post ) {
-						setup_postdata($post);
-					?>
-					<div class="item">
-						<div class="img">
-							<?php the_post_thumbnail('index_thumbnail'); ?>
-						</div>
-						<div class="title">
-							<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
-						</div>
-						<div class="time">
-							<?php the_time('Y.m.d') ?>    
-						</div>
-						<div class="category">
-							<?php the_category(',') ?>
-						</div>
-					</div>
-					<?php
-						}
-						wp_reset_postdata();
-					?>
+						<?php
+							global $post;
+							$args = array( 'posts_per_page' => 8 );
+							$myposts = get_posts( $args );
+							foreach( $myposts as $post ) {
+							setup_postdata($post);
+						?>
+						<li class="p-page__card">
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail('index_thumbnail'); ?>
+								<h3 class="p-page__card__title"><?php the_title(); ?></h3>
+								<time class="p-page__card__time"><?php the_time('Y.m.d') ?></time>
+							</a>
+							<span class="p-page__card__category"><?php the_category(',') ?></span>
+						</li>
+						<?php
+							}
+							wp_reset_postdata();
+						?>
+					</ul>
 				</div>
 			</section>
 			<!-- /.p-page__content -->
