@@ -212,4 +212,16 @@
 			@extend .p-page--single__title;
 		}
 	}
+
+	// p-page--404
+	&--404 {
+		@extend .p-page;
+		.c-button {
+			margin-top: 32px;
+			text-align: left;
+		}
+		.c-button a {
+			text-align: center;
+		}
+	}
 }
