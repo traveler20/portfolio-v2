@@ -1,7 +1,7 @@
         <?php get_header(); ?>
 
 		<!-- main -->
-		<main>
+		<main class="p-page--page">
 			<!-- .p-page__fv -->
 			<section class="p-page__fv">
 				<div class="c-inner">

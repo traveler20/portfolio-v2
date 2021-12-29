@@ -1,7 +1,7 @@
         <?php get_header(); ?>
 
 		<!-- main -->
-		<main>
+		<main class="p-page--single">
 			<!-- .p-page__fv -->
 			<section class="p-page--single__fv">
 				<div class="c-inner">
@@ -15,7 +15,7 @@
 
 			<!-- .p-page__content -->
 			<section class="p-page--single__content c-section" id="content">
-				<div class="c-section__inner">
+				<div class="c-section__inner p-page__editer">
 					<h1 class="p-page--single__title"><?php the_title(); ?></h1>
 					<!-- single.php -->
 					<?php if (have_posts()): ?>

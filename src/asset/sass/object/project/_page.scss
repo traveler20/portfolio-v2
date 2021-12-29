@@ -3,6 +3,115 @@
 @use "./../../foundation/system" as s;
 
 .p-page {
+	&__editer {
+		// wordpress default styling
+		blockquote {
+			display: block;
+			margin-block-start: 1em;
+			margin-block-end: 1em;
+			margin-inline-start: 40px;
+			margin-inline-end: 40px;
+		}
+		.wp-block-preformatted {
+			white-space: pre-wrap;
+		}
+		.wp-block-button {
+			text-align: center;
+			&__link {
+				color: #fff;
+				background-color: #32373c;
+				border-radius: 9999px;
+				box-shadow: none;
+				cursor: pointer;
+				display: inline-block;
+				font-size: 1.125em;
+				padding: calc(0.667em + 2px) calc(1.333em + 2px);
+				text-align: center;
+				text-decoration: none;
+				overflow-wrap: break-word;
+				box-sizing: border-box;
+			}
+		}
+		// wordpress editer styling
+		$editer-space: 24px;
+
+		ul {
+			margin: $editer-space 0;
+			li {
+				position: relative;
+				padding-left: 20px;
+				&:before {
+					font-family: "Material Icons";
+					content: "\e876";
+					font-weight: bold;
+					left: 0;
+					position: absolute;
+				}
+			}
+		}
+		p {
+			margin: $editer-space 0;
+		}
+		h2 {
+			font-size: 2.8rem;
+			font-weight: bold;
+			margin: $editer-space 0 calc($editer-space - 12px);
+		}
+		h3 {
+			font-size: 2.6rem;
+			font-weight: bold;
+			margin: $editer-space 0 calc($editer-space - 12px);
+		}
+		h4 {
+			font-size: 2.4rem;
+			font-weight: bold;
+			margin: $editer-space 0 calc($editer-space - 12px);
+		}
+		h5 {
+			font-size: 2rem;
+			font-weight: bold;
+			margin: $editer-space 0 calc($editer-space - 12px);
+		}
+		// 引用
+		.wp-block-quote {
+			display: block;
+			padding-block-start: 1em;
+			padding-block-end: 1em;
+			padding-inline-start: 1em;
+			padding-inline-end: 1em;
+			margin: $editer-space 0;
+			border-left: solid 3px s.$c-body;
+			background-color: rgba($color: s.$c-base-right, $alpha: 0.3);
+			p {
+				margin-top: 0;
+			}
+			cite {
+				display: block;
+				text-align: right;
+			}
+		}
+		// 整形済みテキスト
+		.wp-block-preformatted {
+			padding: 20px;
+			margin: $editer-space 0;
+			background-color: rgba($color: s.$c-base-right, $alpha: 0.3);
+			border-radius: 2px;
+		}
+		// ボタン
+		.wp-block-buttons {
+			margin: $editer-space 0;
+		}
+		.wp-block-button__link:hover {
+			text-decoration: none;
+			opacity: 0.7;
+		}
+		// font-size悩み中…。
+		// * {
+		// 	font-size: 1.8rem;
+		// }
+		//
+	}
+
 	&__fv {
 		&Title {
 			@include s.railway($weight: 900);
@@ -165,6 +274,11 @@
 	// 	}
 	// }
 
+	// p-page--page
+	&--page {
+		@extend .p-page;
+	}
+
 	// p-page--single
 	&--single {
 		@extend .p-page;
@@ -189,7 +303,7 @@
 			font-weight: bold;
 		}
 		&__content {
-			padding: 40px 0 100px;
+			padding: 40px 0 50px;
 			min-height: 50vh;
 
 			&.c-section {

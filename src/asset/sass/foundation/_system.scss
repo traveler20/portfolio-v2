@@ -33,6 +33,9 @@ $transition400ms: all 0.4s;
 	font-weight: $weight;
 }
 
+// google fonts icons
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
 @function get_vw($size, $viewport: 375) {
 	$rate: 100 / $viewport;
 	@return $rate * $size * 1vw;
