@@ -14,7 +14,7 @@
 			<!-- /.p-page__fv -->
 
 			<!-- .p-page__content -->
-			<section class="p-page__content c-section" id="content">
+			<section class="p-page__content c-section" id="content" style="clip-path: polygon(0 0,100% 2%,100% 100%,0 100%);">
 				<div class="c-section__inner">
 					<ul class="p-page__cards">
 					<!-- page.php -->
