@@ -16,23 +16,41 @@
 			<!-- .p-page__content -->
 			<section class="p-page--single__content c-section" id="content">
 				<div class="c-section__inner">
-					<h1 class="p-page--single__title"><?php the_title(); ?></h1>
-					<?php 
-						if ( have_posts() ) :
-						while ( have_posts() ) : the_post();
+					
+					<?php
+						$categories = get_the_category();
+						$tags = get_the_tags();
 					?>
-						<h2>
-							<a href="<?php echo get_permalink(); ?>"><?php the_title(); ?></a>
-						</h2>
-						<section>
-							<p>作成日時：<?php the_time('Y年n月j日'); ?></p>
-							<a href="<?php echo get_permalink(); ?>"><?php the_excerpt(); ?></a>
+					<header>
+						<div id="header_layer">
+							<h1 class="p-page--single__title"><?php the_archive_title('','の記事');?></h1>
+							<?php echo category_description();?>		
+							<nav id="header_nav">
+							</nav>
+						</div><!--END-header_layer-->
+					</header>
+					<main id="category_main" <?php post_class();?>>
+						<?php if(have_posts()):?>
+						<?php while(have_posts()):the_post();?>
+						<section class="articles_index">
+							<h2><a href="<?php the_permalink(); ?>"><?php echo the_title();?></a></h2>
+							<time class="date"><?php the_time('Y年n月j日'); ?></time>
+							<div class="articles_index_thumbnail">
+								<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail(); ?>
+								</a>
+							</div>
+							<nav id="tag_navigation">	
+								<?php if (the_category()) the_category('<ul id="tag_list"><li class="tag_name">','</li><li class="tag_name">','</li></ul>'); ?>
+							</nav>
 						</section>
-						<hr>
-					<?php 
-						endwhile;
-						endif;
-					?>
+						<?php endwhile;?>
+						<div id="pager_navigation">
+							<?php posts_nav_link( '　', '<i class="fa fa-angle-left icon-left"></i>PREV', 'NEXT<i class="fa fa-angle-right icon-right"></i>' ); ?>
+						</div>
+						<?php endif;?>
+					</main>
+
 				</div>
 			</section>
 			<!-- /.p-page__content -->

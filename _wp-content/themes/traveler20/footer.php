@@ -68,19 +68,29 @@
 						/>
 					</svg>
 				</a>
-				<ul class="l-footer__lists">
-					<li><a href="<?php echo esc_url(home_url()); ?>/about">about</a></li>
-					<li><a href="<?php echo esc_url(home_url()); ?>/work">work</a></li>
-					<li><a href="<?php echo esc_url(home_url()); ?>/service">service</a></li>
-					<li><a href="<?php echo esc_url(home_url()); ?>/profile">profile</a></li>
-					<li><a href="<?php echo esc_url(home_url()); ?>/contact">contact</a></li>
-				</ul>
-				<ul class="l-footer__rights">
-					<!-- <li><a href="/policy">privacy policy</a></li> -->
-					<li>
-						<small>&copy;&nbsp;2020 <?php echo bloginfo('name'); ?>.</small>
-					</li>
-				</ul>
+				<nav class="l-footer__nav">
+					<h4 class="l-footer__subtitle">Links</h4>
+					<?php
+						$args = array(
+							'menu'=>'footer-menu-left',
+							'menu_class' => 'l-footer__lists',
+							'container' => false,
+						);
+						wp_nav_menu($args);
+					?>
+				</nav>
+				<nav class="l-footer__nav">
+					<h4 class="l-footer__subtitle">About</h4>
+					<?php
+						$args = array(
+							'menu'=>'footer-menu-right',
+							'menu_class' => 'l-footer__lists',
+							'container' => false,
+						);
+						wp_nav_menu($args);
+					?>
+				</nav>
+				<small class="l-footer__copy">&copy;&nbsp;2021&nbsp;traveler20.</small>
 			</div>
 		</footer>
 		<!-- /.l-footer -->

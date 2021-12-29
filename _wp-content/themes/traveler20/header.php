@@ -5,9 +5,25 @@
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta name="author" content="traveler20" />
-		<title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?></title>
-		<meta name="description" content="<?php bloginfo('description'); ?>" />
-		<link rel="canonical" href="https://traveler20.site/" />
+		<title><?php wp_title('｜', true, 'right'); ?><?php bloginfo('name'); ?> - <?php bloginfo('description'); ?></title>
+		<link rel="canonical" href="<?php echo esc_url(home_url()); ?>" />
+		<?php echo_meta_description_tag(); ?>
+		<meta name="keywords" content="<?php my_meta_keywords_set(); ?>">
+		<meta name="description" content="<?php my_meta_description_set(); ?>">
+		<meta property="og:description" content="<?php my_meta_description_set(); ?>" />
+		<meta property="og:url" content="<?php echo esc_url(home_url()); ?>" />
+		<meta
+			property="og:image"
+			content="https://traveler20.site/asset/img/meta/ogp.webp"
+		/>
+		<meta property="og:type" content="website" />
+		<meta name="twitter:card" content="large" />
+		<meta name="twitter:site" content="@traveler20site" />
+		<meta property="og:locale" content="ja_JP" />
+		<link rel="icon" type="image/x-icon" href="<?php echo esc_url(get_theme_file_uri('./asset/img/meta/favicon.ico')); ?>" />
+
+
+ 
 		<!-- php WordPress wp_head -->
         <?php wp_head(); ?>
 		<!-- /php WordPress wp_head -->
@@ -105,6 +121,7 @@
 					<label for="l-header__navToggle" class="l-header__navClose"></label>
 					<?php
 					$args = array(
+						'menu'=>'header-menu',
 						'menu_class' => 'l-header__navLists js-navLists',
 						'container' => false,
 					);
