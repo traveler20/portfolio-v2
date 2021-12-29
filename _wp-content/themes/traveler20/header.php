@@ -34,10 +34,6 @@
 			<div class="c-loading__spinner"></div>
 		</div>
 
-		<div class="js-cursor c-cursor">
-			<div class="c-cursor__bg"></div>
-		</div>
-
 		<!-- .l-header -->
 		<header class="l-header" id="js-headerIn">
 			<div class="c-inner">

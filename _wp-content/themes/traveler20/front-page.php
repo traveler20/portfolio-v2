@@ -1,5 +1,9 @@
 		<?php get_header(); ?>
 
+		<div class="js-cursor c-cursor">
+			<div class="c-cursor__bg"></div>
+		</div>
+
 		<!-- main -->
 		<main>
 			<!-- .p-fv -->
