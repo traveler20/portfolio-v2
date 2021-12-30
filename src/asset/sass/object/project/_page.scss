@@ -56,16 +56,27 @@
 			font-size: 2.8rem;
 			font-weight: bold;
 			margin: $editer-space 0 calc($editer-space - 12px);
+			padding: 6px 8px;
+			border-left: solid 4px s.$c-accent;
+			border-radius: 2px;
 		}
 		h3 {
 			font-size: 2.6rem;
 			font-weight: bold;
 			margin: $editer-space 0 calc($editer-space - 12px);
+			// padding: 4px 14px;
+			// margin-right: 20px;
+			// border-top: solid 3px s.$c-body;
+			// border-bottom: solid 3px s.$c-body;
 		}
 		h4 {
 			font-size: 2.4rem;
 			font-weight: bold;
 			margin: $editer-space 0 calc($editer-space - 12px);
+			// padding: 3px 14px;
+			// &:before {
+			// 	content: "・";
+			// }
 		}
 		h5 {
 			font-size: 2rem;
@@ -84,10 +95,12 @@
 			background-color: rgba($color: s.$c-base-right, $alpha: 0.3);
 			p {
 				margin-top: 0;
+				margin-bottom: 0;
 			}
 			cite {
 				display: block;
 				text-align: right;
+				margin-top: $editer-space;
 			}
 		}
 		// 整形済みテキスト
