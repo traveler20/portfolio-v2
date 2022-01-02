@@ -17,6 +17,9 @@
 			<section class="p-page--single__content c-section" id="content">
 				<div class="c-section__inner p-page__editer">
 					<h1 class="p-page--single__title"><?php the_title(); ?></h1>
+					<?php if(has_post_thumbnail()): ?>
+						<?php the_post_thumbnail("full", array("alt" => get_the_title(), "class" => "p-page__eyecatch")); ?>
+					<?php endif; ?>
 					<!-- single.php -->
 					<?php if (have_posts()): ?>
 						<?php while (have_posts()) : the_post(); ?>

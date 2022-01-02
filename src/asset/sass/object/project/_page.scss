@@ -3,6 +3,8 @@
 @use "./../../foundation/system" as s;
 
 .p-page {
+	// wordpress editer styling
+	$editer-space: 24px;
 	&__editer {
 		// wordpress default styling
 		blockquote {
@@ -32,8 +34,6 @@
 				box-sizing: border-box;
 			}
 		}
-		// wordpress editer styling
-		$editer-space: 24px;
 
 		ul {
 			margin: $editer-space 0;
@@ -123,6 +123,13 @@
 		// 	font-size: 1.8rem;
 		// }
 		//
+	}
+
+	&__eyecatch {
+		width: 100vw;
+		max-height: 500px;
+		object-fit: cover;
+		margin: $editer-space 0;
 	}
 
 	&__fv {
