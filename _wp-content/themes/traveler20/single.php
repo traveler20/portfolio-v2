@@ -28,6 +28,10 @@
 					<?php else: ?>
 					<?php endif; ?>
 				</div>
+				<div class="c-button">
+					<h3>その他の実績はこちら</h3>
+					<a href="./../">実績一覧ページへ</a>
+				</div>
 			</section>
 			<!-- /.p-page__content -->
 		</main>

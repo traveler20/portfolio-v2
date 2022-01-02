@@ -132,6 +132,10 @@
 		margin: $editer-space 0;
 	}
 
+	.c-button {
+		margin: 28px auto 36px;
+	}
+
 	&__fv {
 		&Title {
 			@include s.railway($weight: 900);
