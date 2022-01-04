@@ -20,7 +20,7 @@
 					<!-- page.php -->
 						<?php
 							global $post;
-							$args = array( 'posts_per_page' => 9 );
+							$args = array( 'posts_per_page' => 15 );
 							$myposts = get_posts( $args );
 							foreach( $myposts as $post ) {
 							setup_postdata($post);
