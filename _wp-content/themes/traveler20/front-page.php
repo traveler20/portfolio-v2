@@ -64,90 +64,54 @@
 						<div class="p-work__slider">
 							<ul class="p-work__lists">
 								<li>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_lp-plant.webp')); ?>" alt="" />
+								</li>
+								<li>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_lp-kokopp.webp')); ?>" alt="" />
+								</li>
+								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-plant.webp"
+										src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_topic-tonomine.webp')); ?>"
 										alt=""
-										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-kokopp.webp"
+										src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_ec-pineapple.webp')); ?>"
 										alt=""
-										loading="lazy"
 									/>
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_topic-tonomine.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_portfolio.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_ec-pineapple.webp"
-										alt=""
-										loading="lazy"
-									/>
-								</li>
-								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_portfolio.webp"
-										alt=""
-										loading="lazy"
-									/>
-								</li>
-								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/design_hp-beauty.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/design_hp-beauty.webp')); ?>" alt="" />
 								</li>
 							</ul>
 							<ul class="p-work__lists">
 								<li>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_lp-plant.webp')); ?>" alt="" />
+								</li>
+								<li>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_lp-kokopp.webp')); ?>" alt="" />
+								</li>
+								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-plant.webp"
+										src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_topic-tonomine.webp')); ?>"
 										alt=""
-										loading="lazy"
 									/>
 								</li>
 								<li>
 									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_lp-kokopp.webp"
+										src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_ec-pineapple.webp')); ?>"
 										alt=""
-										loading="lazy"
 									/>
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_topic-tonomine.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/cording_portfolio.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_ec-pineapple.webp"
-										alt=""
-										loading="lazy"
-									/>
-								</li>
-								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/cording_portfolio.webp"
-										alt=""
-										loading="lazy"
-									/>
-								</li>
-								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/design_hp-beauty.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/design_hp-beauty.webp')); ?>" alt="" />
 								</li>
 							</ul>
 						</div>
@@ -157,96 +121,46 @@
 						<div class="p-work__slider">
 							<ul class="p-work__lists">
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_ico-flaticon.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_ico-flaticon.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_bnr-kokopp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_thumb-01.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_thumb-01.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/others_app-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/others_app-kokopp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-zenicapp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_bnr-zenicapp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_logo-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_logo-kokopp.webp')); ?>" alt="" />
 								</li>
 							</ul>
 							<ul class="p-work__lists">
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_ico-flaticon.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_ico-flaticon.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_bnr-kokopp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_thumb-01.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_thumb-01.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/others_app-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/others_app-kokopp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_bnr-zenicapp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_bnr-zenicapp.webp')); ?>" alt="" />
 								</li>
 								<li>
-									<img
-										src="https://traveler20.site/portfolio/asset/img/work/psai_logo-kokopp.webp"
-										alt=""
-										loading="lazy"
-									/>
+									<img src="<?php echo esc_url(get_theme_file_uri('asset/img/work/psai_logo-kokopp.webp')); ?>" alt="" />
 								</li>
 							</ul>
 						</div>
 					</article>
-
-					
 
 					<p class="p-work__description">
 						その他、印刷通販サイトでのコーディング経験やスタートアップ企業のランディングページ制作・運用経験があります。
