@@ -90,7 +90,7 @@
 						wp_nav_menu($args);
 					?>
 				</nav>
-				<small class="l-footer__copy">&copy;&nbsp;2021&nbsp;traveler20.</small>
+				<small class="l-footer__copy">&copy;&nbsp;2022&nbsp;traveler20.</small>
 			</div>
 		</footer>
 		<!-- /.l-footer -->
