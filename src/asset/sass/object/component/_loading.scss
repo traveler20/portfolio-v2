@@ -25,7 +25,7 @@
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		color: s.$c-accent;
+		color: s.$c-body;
 		width: 100px;
 		height: 30px;
 		margin: -10px 0 0 -45px;
@@ -54,8 +54,8 @@
 			bottom: 5px;
 			left: 5px;
 			border: 3px solid transparent;
-			border-top-color: s.$c-gray-dark;
-			border-bottom-color: s.$c-gray-dark;
+			border-top-color: rgba($color: s.$c-accent, $alpha: 0.4);
+			border-bottom-color: rgba($color: s.$c-accent, $alpha: 0.4);
 			border-radius: 50%;
 			animation: rotate 3s linear infinite;
 		}
@@ -67,8 +67,8 @@
 			bottom: 15px;
 			left: 15px;
 			border: 3px solid transparent;
-			border-top-color: s.$c-gray-right;
-			border-bottom-color: s.$c-gray-right;
+			border-top-color: rgba($color: s.$c-accent, $alpha: 0.8);
+			border-bottom-color: rgba($color: s.$c-accent, $alpha: 0.8);
 			border-radius: 50%;
 			animation: rotate 1.5s linear infinite;
 		}
