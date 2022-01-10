@@ -6,34 +6,51 @@
 	// wordpress editer styling
 	$editer-space: 24px;
 	&__editer {
-		// wordpress default styling
-		blockquote {
-			display: block;
-			margin-block-start: 1em;
-			margin-block-end: 1em;
-			margin-inline-start: 40px;
-			margin-inline-end: 40px;
-		}
-		.wp-block-preformatted {
-			white-space: pre-wrap;
-		}
-		.wp-block-button {
-			text-align: center;
-			&__link {
-				color: #fff;
-				background-color: #32373c;
-				border-radius: 9999px;
-				box-shadow: none;
-				cursor: pointer;
-				display: inline-block;
-				font-size: 1.125em;
-				padding: calc(0.667em + 2px) calc(1.333em + 2px);
-				text-align: center;
-				text-decoration: none;
-				overflow-wrap: break-word;
-				box-sizing: border-box;
-			}
-		}
+		// // wordpress default styling
+		// blockquote {
+		// 	display: block;
+		// 	margin-block-start: 1em;
+		// 	margin-block-end: 1em;
+		// 	margin-inline-start: 40px;
+		// 	margin-inline-end: 40px;
+		// }
+		// .wp-block-preformatted {
+		// 	white-space: pre-wrap;
+		// }
+		// .wp-block-button {
+		// 	text-align: center;
+		// 	&__link {
+		// 		color: #fff;
+		// 		background-color: #32373c;
+		// 		border-radius: 9999px;
+		// 		box-shadow: none;
+		// 		cursor: pointer;
+		// 		display: inline-block;
+		// 		font-size: 1.125em;
+		// 		padding: calc(0.667em + 2px) calc(1.333em + 2px);
+		// 		text-align: center;
+		// 		text-decoration: none;
+		// 		overflow-wrap: break-word;
+		// 		box-sizing: border-box;
+		// 	}
+		// }
+		// .wp-block-table.is-style-stripes {
+		// 	border-spacing: 0;
+		// 	border-collapse: inherit;
+		// 	background-color: transparent;
+		// 	border-bottom: 1px solid #f0f0f0;
+		// }
+		// .wp-block-table .has-fixed-layout {
+		// 	table-layout: fixed;
+		// 	width: 100%;
+		// }
+		// .wp-block-table table {
+		// 	border-collapse: collapse;
+		// 	width: 100%;
+		// }
+		// .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+		// 	background-color: #f0f0f0;
+		// }
 
 		ul {
 			margin: $editer-space 0;
@@ -117,6 +134,33 @@
 		.wp-block-button__link:hover {
 			text-decoration: none;
 			opacity: 0.7;
+		}
+		// テーブル
+		.wp-block-table {
+			margin: $editer-space 0;
+			&.is-style-stripes {
+				border-bottom: none;
+				tbody tr:nth-child(odd) {
+					background-color: s.$c-base;
+				}
+			}
+			table {
+				border: solid 1px s.$c-gray-dark;
+				// width: auto;
+			}
+			th,
+			td {
+				padding: 8px 10px;
+			}
+			th {
+				border-bottom: solid 1px s.$c-gray-dark;
+				border-left: solid 1px s.$c-gray-dark;
+				background-color: s.$c-base-sub;
+				text-align: center;
+			}
+			td {
+				border: dashed 1px s.$c-gray-dark;
+			}
 		}
 		// font-size悩み中…。
 		// * {
