@@ -279,7 +279,7 @@
 						お問い合わせ
 					</h2>
 					<div class="p-contact__content">
-						<?php echo do_shortcode('[contact-form-7 id="22" title="contact-form"]'); ?>
+						<?php echo do_shortcode('[contact-form-7 id="72" title="traveler20-contact"]'); ?>
 					</div>
 				</div>
 			</section>
